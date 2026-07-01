@@ -81,19 +81,15 @@ function shouldContinue(state) {
   if (lastMessage.tool_calls?.length) {
     return "tools";
   }
-  return END;
-}
 
-function forbiddenProducts(state) {
-  const lastMessage = state.messages[state.messages.length - 1];
-  if (lastMessage.role !== "user") {
-    return "tools";
-  }
   const forbiddenWords = ["Mascara", "Makeup"];
   if (forbiddenWords.some((word) => lastMessage.content.includes(word))) {
+    console.error("forbidden word detected in the answer, stopping the flow.");
     return END;
   }
-  return "tools";
+
+
+  return END;
 }
 
 // 5) בונים את הגרף: agent -> (כלי?) -> agent -> ... -> סוף
@@ -102,12 +98,6 @@ const app = new StateGraph(MessagesAnnotation)
   .addNode("tools", new ToolNode(tools))
   .addEdge(START, "agent")
   .addConditionalEdges("agent", shouldContinue, { tools: "tools", [END]: END })
-  .addConditionalEdges("tools", forbiddenProducts, {
-    tools: "tools",
-    [END]: END,
-    [START]: "agent",
-  })
-
   .addEdge("tools", "agent")
   .compile();
 
