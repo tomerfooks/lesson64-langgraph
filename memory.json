@@ -1,1 +1,88 @@
-[]
+[
+  {
+    "type": "human",
+    "data": {
+      "content": "my name is shimon",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "9aed1054-167d-4c5e-b3f8-b454b4eccf4e"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DwtIbeNINFXgzvBEkG54ppWVOm8Zy",
+      "content": "Nice to meet you, Shimon. How can I help?",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 142,
+          "completionTokens": 16,
+          "totalTokens": 158
+        },
+        "finish_reason": "stop",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 16,
+        "input_tokens": 142,
+        "total_tokens": 158,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "what is my name?",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "faa7074e-498d-4dbd-b085-b941292906d2"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DwtJ9ScTTDglwhoblSgfqJDbLARHE",
+      "content": "Your name is Shimon.",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 170,
+          "completionTokens": 9,
+          "totalTokens": 179
+        },
+        "finish_reason": "stop",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 9,
+        "input_tokens": 170,
+        "total_tokens": 179,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  }
+]

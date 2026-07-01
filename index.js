@@ -98,6 +98,6 @@ const result = await app.invoke({
 // ההודעה האחרונה היא התשובה הסופית של הסוכן
 const answer = result.messages[result.messages.length - 1];
 
-saveMemory([...memory, answer]);
+saveMemory(result.messages);
 
 console.log(answer.content);
