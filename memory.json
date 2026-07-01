@@ -1,24 +1,104 @@
 [
   {
-    "type": "human",
+    "type": "system",
     "data": {
-      "content": "my name is shimon",
+      "content": "\"you are a helpful assistant\"",
       "additional_kwargs": {},
       "response_metadata": {},
-      "id": "9aed1054-167d-4c5e-b3f8-b454b4eccf4e"
+      "id": "91a2a200-d132-4186-a29f-77a59fd9dab6"
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "find phones",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "e871716c-cd44-4e55-b88e-0532684ff65c"
     }
   },
   {
     "type": "ai",
     "data": {
-      "id": "chatcmpl-DwtIbeNINFXgzvBEkG54ppWVOm8Zy",
-      "content": "Nice to meet you, Shimon. How can I help?",
+      "id": "chatcmpl-DwtPSVYwSjG5LeILPEgXRybWbCmnq",
+      "content": "",
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "id": "call_vUVj8SrIHABgyD2eniqUCnKN",
+            "type": "function",
+            "function": {
+              "name": "search_products",
+              "arguments": "{\"query\":\"phones\"}"
+            }
+          }
+        ]
+      },
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 149,
+          "completionTokens": 17,
+          "totalTokens": 166
+        },
+        "finish_reason": "tool_calls",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [
+        {
+          "name": "search_products",
+          "args": {
+            "query": "phones"
+          },
+          "type": "tool_call",
+          "id": "call_vUVj8SrIHABgyD2eniqUCnKN"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 17,
+        "input_tokens": 149,
+        "total_tokens": 166,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "tool",
+    "data": {
+      "status": "success",
+      "content": "Apple AirPods Max Silver - 549.99$\nBeats Flex Wireless Earphones - 49.99$\nSelfie Stick Monopod - 12.99$\nOppo K1 - 299.99$",
+      "tool_call_id": "call_vUVj8SrIHABgyD2eniqUCnKN",
+      "name": "search_products",
+      "metadata": {
+        "versions": {
+          "@langchain/core": "1.2.1"
+        }
+      },
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "85aed6ac-ec4b-4fd0-966a-b2e3754fb0d9"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DwtPT8K0WxiJuQ4LM7H8ZOHRljro2",
+      "content": "Found:\n- Apple AirPods Max Silver — 549.99$\n- Beats Flex Wireless Earphones — 49.99$\n- Selfie Stick Monopod — 12.99$\n- Oppo K1 — 299.99$",
       "additional_kwargs": {},
       "response_metadata": {
         "tokenUsage": {
-          "promptTokens": 142,
-          "completionTokens": 16,
-          "totalTokens": 158
+          "promptTokens": 222,
+          "completionTokens": 52,
+          "totalTokens": 274
         },
         "finish_reason": "stop",
         "model_provider": "openai",
@@ -28,9 +108,9 @@
       "tool_calls": [],
       "invalid_tool_calls": [],
       "usage_metadata": {
-        "output_tokens": 16,
-        "input_tokens": 142,
-        "total_tokens": 158,
+        "output_tokens": 52,
+        "input_tokens": 222,
+        "total_tokens": 274,
         "input_token_details": {
           "audio": 0,
           "cache_read": 0
@@ -45,23 +125,23 @@
   {
     "type": "human",
     "data": {
-      "content": "what is my name?",
+      "content": "what is the total price of all the phones? ",
       "additional_kwargs": {},
       "response_metadata": {},
-      "id": "faa7074e-498d-4dbd-b085-b941292906d2"
+      "id": "7a803341-aec5-46c1-9433-9e10c55844ed"
     }
   },
   {
     "type": "ai",
     "data": {
-      "id": "chatcmpl-DwtJ9ScTTDglwhoblSgfqJDbLARHE",
-      "content": "Your name is Shimon.",
+      "id": "chatcmpl-DwtQSMmPYXDdDsgWIVRRaYOeLkyqW",
+      "content": "Total: 912.96$",
       "additional_kwargs": {},
       "response_metadata": {
         "tokenUsage": {
-          "promptTokens": 170,
-          "completionTokens": 9,
-          "totalTokens": 179
+          "promptTokens": 292,
+          "completionTokens": 10,
+          "totalTokens": 302
         },
         "finish_reason": "stop",
         "model_provider": "openai",
@@ -71,9 +151,9 @@
       "tool_calls": [],
       "invalid_tool_calls": [],
       "usage_metadata": {
-        "output_tokens": 9,
-        "input_tokens": 170,
-        "total_tokens": 179,
+        "output_tokens": 10,
+        "input_tokens": 292,
+        "total_tokens": 302,
         "input_token_details": {
           "audio": 0,
           "cache_read": 0

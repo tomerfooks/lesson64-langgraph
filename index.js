@@ -1,5 +1,9 @@
-
-import { StateGraph, MessagesAnnotation, START, END } from "@langchain/langgraph";
+import {
+  StateGraph,
+  MessagesAnnotation,
+  START,
+  END,
+} from "@langchain/langgraph";
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { ToolNode } from "@langchain/langgraph/prebuilt";
 
@@ -28,7 +32,7 @@ const model = new ChatOpenAI({
 const searchProducts = tool(
   async ({ query }) => {
     const data = await fetch(
-      `https://dummyjson.com/products/search?q=${encodeURIComponent(query)}`
+      `https://dummyjson.com/products/search?q=${encodeURIComponent(query)}`,
     ).then((res) => res.json());
     // לוקחים עד 5 תוצאות ומחזירים שם ומחיר של כל מוצר
     return data.products
@@ -40,19 +44,22 @@ const searchProducts = tool(
     name: "search_products",
     description: "מחפש מוצרים בחנות לפי מילת חיפוש ומחזיר שם ומחיר",
     schema: z.object({ query: z.string() }),
-  }
+  },
 );
 
-
 const MEMORY_FILE = "memory.json";
+const SYSTEM_PROMPT_FILE = "system-prompt.json";
 
 // טוען היסטוריית הודעות מהקובץ (אם קיים) וממיר לאובייקטי הודעה של LangChain.
 function loadMemory() {
-  if (!existsSync(MEMORY_FILE)) return [];
+  if (!existsSync(MEMORY_FILE))
+    return [
+      { role: "system", content: readFileSync(SYSTEM_PROMPT_FILE, "utf8") },
+    ];
   const stored = JSON.parse(readFileSync(MEMORY_FILE, "utf8"));
   return mapStoredMessagesToChatMessages(stored);
 }
- 
+
 // שומר את כל ההיסטוריה לקובץ בפורמט שניתן לשחזר בהמשך (כולל קריאות לכלים).
 function saveMemory(messages) {
   const stored = mapChatMessagesToStoredMessages(messages);
