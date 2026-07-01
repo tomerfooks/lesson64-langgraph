@@ -5,6 +5,8 @@ import { ChatOpenAI } from "@langchain/openai";
 import { tool } from "@langchain/core/tools";
 import { z } from "zod";
 import dotenv from "dotenv";
+import { readFileSync, writeFileSync, existsSync } from "node:fs";
+
 dotenv.config();
 
 // 1) המודל. שנו את משתני הסביבה כדי לעבוד עם ספק אחר.
@@ -22,7 +24,6 @@ const searchProducts = tool(
     const data = await fetch(
       `https://dummyjson.com/products/search?q=${encodeURIComponent(query)}`
     ).then((res) => res.json());
-
     // לוקחים עד 5 תוצאות ומחזירים שם ומחיר של כל מוצר
     return data.products
       .slice(0, 5)
@@ -64,7 +65,7 @@ const app = new StateGraph(MessagesAnnotation)
   .compile();
 
 // 6) הרצה
-const question = process.argv.slice(2).join(" ") || "חפש לי טלפון";
+const question = process.argv.slice(2).join(" ");
 
 const result = await app.invoke({
   messages: [{ role: "user", content: question }],
