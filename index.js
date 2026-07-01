@@ -1,11 +1,17 @@
 
 import { StateGraph, MessagesAnnotation, START, END } from "@langchain/langgraph";
+import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { ToolNode } from "@langchain/langgraph/prebuilt";
+
+import {
+  mapChatMessagesToStoredMessages,
+  mapStoredMessagesToChatMessages,
+} from "@langchain/core/messages";
+
 import { ChatOpenAI } from "@langchain/openai";
 import { tool } from "@langchain/core/tools";
 import { z } from "zod";
 import dotenv from "dotenv";
-import { readFileSync, writeFileSync, existsSync } from "node:fs";
 
 dotenv.config();
 
@@ -36,6 +42,22 @@ const searchProducts = tool(
     schema: z.object({ query: z.string() }),
   }
 );
+
+
+const MEMORY_FILE = "memory.json";
+
+// טוען היסטוריית הודעות מהקובץ (אם קיים) וממיר לאובייקטי הודעה של LangChain.
+function loadMemory() {
+  if (!existsSync(MEMORY_FILE)) return [];
+  const stored = JSON.parse(readFileSync(MEMORY_FILE, "utf8"));
+  return mapStoredMessagesToChatMessages(stored);
+}
+ 
+// שומר את כל ההיסטוריה לקובץ בפורמט שניתן לשחזר בהמשך (כולל קריאות לכלים).
+function saveMemory(messages) {
+  const stored = mapChatMessagesToStoredMessages(messages);
+  writeFileSync(MEMORY_FILE, JSON.stringify(stored, null, 2), "utf8");
+}
 
 const tools = [searchProducts];
 const modelWithTools = model.bindTools(tools);
