@@ -89,10 +89,15 @@ const app = new StateGraph(MessagesAnnotation)
 // 6) הרצה
 const question = process.argv.slice(2).join(" ");
 
+const memory = loadMemory();
+
 const result = await app.invoke({
-  messages: [{ role: "user", content: question }],
+  messages: [...memory, { role: "user", content: question }],
 });
 
 // ההודעה האחרונה היא התשובה הסופית של הסוכן
 const answer = result.messages[result.messages.length - 1];
+
+saveMemory([...memory, answer]);
+
 console.log(answer.content);
