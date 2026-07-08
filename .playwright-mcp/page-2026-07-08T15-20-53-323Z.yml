@@ -1,0 +1,120 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]: LangGraph · הדגמה חיה
+    - heading "כך זורם מידע בגרף" [level=1] [ref=e6]
+    - paragraph [ref=e7]: "גרף ב־LangGraph הוא מסלול: המידע (ה־State) נכנס בהתחלה, עובר מצומת לצומת, ובכל קשת מותנית הגרף מחליט לאן להתפצל. לחצו על הכפתור — וצפו בזה קורה."
+  - generic [ref=e8]:
+    - button "▶ הרץ את הגרף" [ref=e9] [cursor=pointer]
+    - group "בחירת מסלול" [ref=e10]:
+      - generic [ref=e11]: לאן תפנה הקשת המותנית?
+      - button "🎲 שהגרף יחליט" [pressed] [ref=e12] [cursor=pointer]
+      - button "צומת 2" [ref=e13] [cursor=pointer]
+      - button "צומת 3" [ref=e14] [cursor=pointer]
+      - button "צומת 4" [ref=e15] [cursor=pointer]
+    - group "מהירות" [ref=e16]:
+      - generic [ref=e17]: "קצב:"
+      - button "רגיל" [pressed] [ref=e18] [cursor=pointer]
+      - button "איטי" [ref=e19] [cursor=pointer]
+  - generic [ref=e20]:
+    - generic [ref=e23]: לחצו על ״הרץ את הגרף״ כדי לראות איך המצב (State) זורם בין הצמתים.
+    - 'img "תרשים זרימה של גרף LangGraph: התחלה, חמישה צמתים, שתי קשתות מותנות וסוף" [ref=e25]':
+      - generic [ref=e31]:
+        - generic [ref=e33]: התחלה
+        - generic [ref=e34]: START
+      - generic [ref=e35]:
+        - generic [ref=e37]: צומת 1
+        - generic [ref=e38]: node_1
+      - generic [ref=e39]:
+        - generic [ref=e41]: קשת מותנית
+        - generic [ref=e42]: route_1()
+      - generic [ref=e43]:
+        - generic [ref=e45]: צומת 2
+        - generic [ref=e46]: node_2
+      - generic [ref=e47]:
+        - generic [ref=e49]: קשת מותנית
+        - generic [ref=e50]: route_2()
+      - generic [ref=e51]:
+        - generic [ref=e53]: צומת 3
+        - generic [ref=e54]: node_3
+      - generic [ref=e55]:
+        - generic [ref=e57]: צומת 5
+        - generic [ref=e58]: node_5
+      - generic [ref=e59]:
+        - generic [ref=e61]: צומת 4
+        - generic [ref=e62]: node_4
+      - generic [ref=e63]:
+        - generic [ref=e65]: סוף
+        - generic [ref=e66]: END
+    - generic [ref=e67]:
+      - generic [ref=e68]:
+        - img [ref=e69]
+        - text: מעוין — כניסה ויציאה (START / END)
+      - generic [ref=e71]:
+        - img [ref=e72]
+        - text: "עיגול — צומת: פונקציה שמעדכנת את המצב"
+      - generic [ref=e74]:
+        - img [ref=e75]
+        - text: "מלבן זוהר — קשת מותנית: כאן הגרף מחליט"
+      - generic [ref=e77]:
+        - img [ref=e78]
+        - text: "חץ — קשת: המסלול שהמצב עובר בו"
+  - generic [ref=e80]:
+    - generic [ref=e81]:
+      - heading "המצב State" [level=3] [ref=e82]:
+        - text: המצב
+        - generic [ref=e83]: State
+      - paragraph [ref=e84]: אובייקט אחד שנוסע בכל הגרף. כל צומת קורא ממנו — וכותב אליו.
+      - generic [ref=e85]:
+        - text: "{"
+        - text: "\"input\": \"מה מזג האוויר בתל אביב?\","
+        - text: "\"route\": null,"
+        - text: "\"answer\": null"
+        - text: "}"
+    - generic [ref=e86]:
+      - heading "יומן הריצה 📜" [level=3] [ref=e87]
+      - paragraph [ref=e88]: כל צעד בגרף — מוסבר בזמן אמת.
+      - list [ref=e89]:
+        - listitem [ref=e90]: עדיין לא רצנו. לחצו ▶ למעלה.
+  - generic [ref=e91]:
+    - heading "ארבעה מושגים — וזה כל הסיפור" [level=2] [ref=e92]
+    - paragraph [ref=e93]: "כל גרף LangGraph, גם המסובך ביותר, בנוי בדיוק מאבני הבניין האלה:"
+    - generic [ref=e94]:
+      - generic [ref=e95]:
+        - img [ref=e96]
+        - heading "מצב State" [level=3] [ref=e98]:
+          - text: מצב
+          - generic [ref=e99]: State
+        - paragraph [ref=e100]: "הזיכרון המשותף של הריצה: מילון אחד שעובר בין כל הצמתים. מה שצומת אחד כותב — הבא אחריו רואה."
+        - code [ref=e101]: "class State(TypedDict): ..."
+      - generic [ref=e102]:
+        - img [ref=e103]
+        - heading "צומת Node" [level=3] [ref=e106]:
+          - text: צומת
+          - generic [ref=e107]: Node
+        - paragraph [ref=e108]: "פונקציית Python רגילה: מקבלת את המצב, עושה עבודה (למשל קריאה למודל), ומחזירה עדכון למצב."
+        - code [ref=e109]: graph.add_node("node_1", node_1)
+      - generic [ref=e110]:
+        - img [ref=e111]
+        - heading "קשת Edge" [level=3] [ref=e113]:
+          - text: קשת
+          - generic [ref=e114]: Edge
+        - paragraph [ref=e115]:
+          - text: "חיבור קבוע בין שני צמתים: אחרי צומת 3"
+          - emphasis [ref=e116]: תמיד
+          - text: מגיע צומת 5. בלי שאלות, בלי תנאים.
+        - code [ref=e117]: graph.add_edge("node_3", "node_5")
+      - generic [ref=e118]:
+        - img [ref=e119]
+        - heading "קשת מותנית Conditional Edge" [level=3] [ref=e123]:
+          - text: קשת מותנית
+          - generic [ref=e124]: Conditional Edge
+        - paragraph [ref=e125]:
+          - text: פונקציה שמציצה במצב ומחזירה את
+          - emphasis [ref=e126]: שם
+          - text: הצומת הבא. זה הרגע שבו הגרף מסתעף — ונהיה חכם.
+        - code [ref=e127]: graph.add_conditional_edges("node_1", route_1)
+  - generic [ref=e128]:
+    - heading "אותו גרף בדיוק — בקוד" [level=2] [ref=e129]
+    - paragraph [ref=e130]: "חמש קריאות add_node, כמה קשתות, ו־compile. זה כל מה שצריך כדי לבנות את מה שראיתם למעלה:"
+    - generic [ref=e132]: "from langgraph.graph import StateGraph, START, END graph = StateGraph(State) graph.add_node(\"node_1\", node_1) graph.add_node(\"node_2\", node_2) graph.add_node(\"node_3\", node_3) graph.add_node(\"node_4\", node_4) graph.add_node(\"node_5\", node_5) graph.add_edge(START, \"node_1\") # קשת רגילה — תמיד graph.add_conditional_edges(\"node_1\", route_1) # בוחרת: צומת 2, 3 או 4 graph.add_conditional_edges(\"node_2\", route_2) # מחליטה אם לסיים graph.add_edge(\"node_3\", \"node_5\") graph.add_edge(\"node_5\", END) graph.add_edge(\"node_4\", END) app = graph.compile() result = app.invoke({\"input\": \"מה מזג האוויר בתל אביב?\"})"
+  - contentinfo [ref=e133]: "הדגמה אינטראקטיבית של מבנה גרף ב־LangGraph · המבנה זהה לתרשים המקורי: מ־START דרך node_1 והקשת המותנית, בשלושה מסלולים אפשריים, עד END"

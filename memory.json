@@ -278,5 +278,2653 @@
         }
       }
     }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "ba820ef1-0123-43dc-936e-8cff4f35a591"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzNml5FI51drvzLa3eMw9bH7FA0KK",
+      "content": "How can I help?",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 377,
+          "completionTokens": 8,
+          "totalTokens": 385
+        },
+        "finish_reason": "stop",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 8,
+        "input_tokens": 377,
+        "total_tokens": 385,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "find phones",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "26d1b27b-bf5e-42d6-99d6-107e5da8f9d9"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzNnUsAwUFduGVsZ3Avl6068Z1cmo",
+      "content": "",
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "id": "call_XcKEeFnMxAuQeU3RwuzgkXIw",
+            "type": "function",
+            "function": {
+              "name": "search_products",
+              "arguments": "{\"query\":\"phones\"}"
+            }
+          }
+        ]
+      },
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 394,
+          "completionTokens": 17,
+          "totalTokens": 411
+        },
+        "finish_reason": "tool_calls",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [
+        {
+          "name": "search_products",
+          "args": {
+            "query": "phones"
+          },
+          "type": "tool_call",
+          "id": "call_XcKEeFnMxAuQeU3RwuzgkXIw"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 17,
+        "input_tokens": 394,
+        "total_tokens": 411,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "tool",
+    "data": {
+      "status": "success",
+      "content": "Apple AirPods Max Silver - 549.99$\nBeats Flex Wireless Earphones - 49.99$\nSelfie Stick Monopod - 12.99$\nOppo K1 - 299.99$",
+      "tool_call_id": "call_XcKEeFnMxAuQeU3RwuzgkXIw",
+      "name": "search_products",
+      "metadata": {
+        "versions": {
+          "@langchain/core": "1.2.1"
+        }
+      },
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "7a0cd8eb-3ea7-4f2c-97e2-83393c43236c"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzNnVfAuvGOXRP0HQ0Id1GzKXP9vF",
+      "content": "Found:\n- Apple AirPods Max Silver — 549.99$\n- Beats Flex Wireless Earphones — 49.99$\n- Selfie Stick Monopod — 12.99$\n- Oppo K1 — 299.99$",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 467,
+          "completionTokens": 52,
+          "totalTokens": 519
+        },
+        "finish_reason": "stop",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 52,
+        "input_tokens": 467,
+        "total_tokens": 519,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "find phones",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "6660f780-9b9b-4ba6-bc34-b62db5a60254"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzOObxkczxSNSaXyvJHSlRoo4SM5r",
+      "content": "",
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "id": "call_vzZhS6vNt6AvJktGd00LquDF",
+            "type": "function",
+            "function": {
+              "name": "search_products",
+              "arguments": "{\"query\":\"phones\"}"
+            }
+          }
+        ]
+      },
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 528,
+          "completionTokens": 17,
+          "totalTokens": 545
+        },
+        "finish_reason": "tool_calls",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [
+        {
+          "name": "search_products",
+          "args": {
+            "query": "phones"
+          },
+          "type": "tool_call",
+          "id": "call_vzZhS6vNt6AvJktGd00LquDF"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 17,
+        "input_tokens": 528,
+        "total_tokens": 545,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "tool",
+    "data": {
+      "status": "success",
+      "content": "Apple AirPods Max Silver - 549.99$\nBeats Flex Wireless Earphones - 49.99$\nSelfie Stick Monopod - 12.99$\nOppo K1 - 299.99$",
+      "tool_call_id": "call_vzZhS6vNt6AvJktGd00LquDF",
+      "name": "search_products",
+      "metadata": {
+        "versions": {
+          "@langchain/core": "1.2.1"
+        }
+      },
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "5fb28a63-766b-4097-ae31-443334fc3136"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzOOdwVEzbyBuK11gnyizeHZrRUE2",
+      "content": "Found:\n- Apple AirPods Max Silver — 549.99$\n- Beats Flex Wireless Earphones — 49.99$\n- Selfie Stick Monopod — 12.99$\n- Oppo K1 — 299.99$",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 601,
+          "completionTokens": 52,
+          "totalTokens": 653
+        },
+        "finish_reason": "stop",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 52,
+        "input_tokens": 601,
+        "total_tokens": 653,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "find computer",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "3504cc17-455d-4485-b6d3-4f9c9a722c80"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzOQfmogYqLR7JjIDjZSvhDpK0ncm",
+      "content": "",
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "id": "call_koGptFbKE8zVWhtp5DyHApDa",
+            "type": "function",
+            "function": {
+              "name": "search_products",
+              "arguments": "{\"query\":\"computer\"}"
+            }
+          }
+        ]
+      },
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 662,
+          "completionTokens": 17,
+          "totalTokens": 679
+        },
+        "finish_reason": "tool_calls",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [
+        {
+          "name": "search_products",
+          "args": {
+            "query": "computer"
+          },
+          "type": "tool_call",
+          "id": "call_koGptFbKE8zVWhtp5DyHApDa"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 17,
+        "input_tokens": 662,
+        "total_tokens": 679,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "tool",
+    "data": {
+      "status": "success",
+      "content": "",
+      "tool_call_id": "call_koGptFbKE8zVWhtp5DyHApDa",
+      "name": "search_products",
+      "metadata": {
+        "versions": {
+          "@langchain/core": "1.2.1"
+        }
+      },
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "7d06e785-a0cb-480f-92e1-2c837bb08710"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzOQh2Uuw1kqB8aONQOgOg5Srv1e5",
+      "content": "No products found for \"computer\".",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 690,
+          "completionTokens": 10,
+          "totalTokens": 700
+        },
+        "finish_reason": "stop",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 10,
+        "input_tokens": 690,
+        "total_tokens": 700,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "find Mascara",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "e6f9fb12-a91c-4239-a13b-1d4b2d7496d0"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzOR7NspqNH1m6XbWdq5vHNzijmOY",
+      "content": "",
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "id": "call_bLpst55dFtdkNpgxAU9Du0Z9",
+            "type": "function",
+            "function": {
+              "name": "search_products",
+              "arguments": "{\"query\":\"Mascara\"}"
+            }
+          }
+        ]
+      },
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 710,
+          "completionTokens": 18,
+          "totalTokens": 728
+        },
+        "finish_reason": "tool_calls",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [
+        {
+          "name": "search_products",
+          "args": {
+            "query": "Mascara"
+          },
+          "type": "tool_call",
+          "id": "call_bLpst55dFtdkNpgxAU9Du0Z9"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 18,
+        "input_tokens": 710,
+        "total_tokens": 728,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "tool",
+    "data": {
+      "status": "success",
+      "content": "Essence Mascara Lash Princess - 9.99$",
+      "tool_call_id": "call_bLpst55dFtdkNpgxAU9Du0Z9",
+      "name": "search_products",
+      "metadata": {
+        "versions": {
+          "@langchain/core": "1.2.1"
+        }
+      },
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "dd896ae2-7837-4eeb-87df-159a04316cf7"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzOR89uvwe0gqtgtEjWcZpnu49nYB",
+      "content": "Found:\n- Essence Mascara Lash Princess — 9.99$",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 751,
+          "completionTokens": 17,
+          "totalTokens": 768
+        },
+        "finish_reason": "stop",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 17,
+        "input_tokens": 751,
+        "total_tokens": 768,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "find Mascara",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "0fc26e80-5a88-49c2-91e6-afdbbc45cd41"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzOSZgCqGRys8Vbgq52OzFLSD67Mv",
+      "content": "",
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "id": "call_zRFt0yFEi1yozPwwkUvQKpHp",
+            "type": "function",
+            "function": {
+              "name": "search_products",
+              "arguments": "{\"query\":\"Mascara\"}"
+            }
+          }
+        ]
+      },
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 778,
+          "completionTokens": 18,
+          "totalTokens": 796
+        },
+        "finish_reason": "tool_calls",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [
+        {
+          "name": "search_products",
+          "args": {
+            "query": "Mascara"
+          },
+          "type": "tool_call",
+          "id": "call_zRFt0yFEi1yozPwwkUvQKpHp"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 18,
+        "input_tokens": 778,
+        "total_tokens": 796,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "tool",
+    "data": {
+      "status": "success",
+      "content": "Essence Mascara Lash Princess - 9.99$",
+      "tool_call_id": "call_zRFt0yFEi1yozPwwkUvQKpHp",
+      "name": "search_products",
+      "metadata": {
+        "versions": {
+          "@langchain/core": "1.2.1"
+        }
+      },
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "301bfefa-adf4-45c0-a7f4-f8ee8fa21da5"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzOSbdfeqnDcQw2X3y8tgAsVLuv2p",
+      "content": "Found:\n- Essence Mascara Lash Princess — 9.99$",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 819,
+          "completionTokens": 17,
+          "totalTokens": 836
+        },
+        "finish_reason": "stop",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 17,
+        "input_tokens": 819,
+        "total_tokens": 836,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "find Mascara",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "b37c15f0-3365-4711-a0ef-63ed7b633e0e"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzOSxDE3l4yy0Em6OdCXhaSlzzHI0",
+      "content": "",
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "id": "call_Csu9nJTQQxOyEObrNELNuxdz",
+            "type": "function",
+            "function": {
+              "name": "search_products",
+              "arguments": "{\"query\":\"Mascara\"}"
+            }
+          }
+        ]
+      },
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 846,
+          "completionTokens": 18,
+          "totalTokens": 864
+        },
+        "finish_reason": "tool_calls",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [
+        {
+          "name": "search_products",
+          "args": {
+            "query": "Mascara"
+          },
+          "type": "tool_call",
+          "id": "call_Csu9nJTQQxOyEObrNELNuxdz"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 18,
+        "input_tokens": 846,
+        "total_tokens": 864,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "tool",
+    "data": {
+      "status": "success",
+      "content": "Essence Mascara Lash Princess - 9.99$",
+      "tool_call_id": "call_Csu9nJTQQxOyEObrNELNuxdz",
+      "name": "search_products",
+      "metadata": {
+        "versions": {
+          "@langchain/core": "1.2.1"
+        }
+      },
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "cb2f5670-f910-484e-a982-4235216843cb"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzOSyyXTYxy6H3JabXQbfwwuVruRc",
+      "content": "Found:\n- Essence Mascara Lash Princess — 9.99$",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 887,
+          "completionTokens": 17,
+          "totalTokens": 904
+        },
+        "finish_reason": "stop",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 17,
+        "input_tokens": 887,
+        "total_tokens": 904,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "find Mascara",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "0006b92c-9d38-487a-b49a-7eed1bb650c1"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzOT8xUH0WEc9hQc03f7vXMtDrDLE",
+      "content": "",
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "id": "call_jV0y1sKUhd0NrBO5jo8Z69Zu",
+            "type": "function",
+            "function": {
+              "name": "search_products",
+              "arguments": "{\"query\":\"Mascara\"}"
+            }
+          }
+        ]
+      },
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 914,
+          "completionTokens": 18,
+          "totalTokens": 932
+        },
+        "finish_reason": "tool_calls",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [
+        {
+          "name": "search_products",
+          "args": {
+            "query": "Mascara"
+          },
+          "type": "tool_call",
+          "id": "call_jV0y1sKUhd0NrBO5jo8Z69Zu"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 18,
+        "input_tokens": 914,
+        "total_tokens": 932,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "tool",
+    "data": {
+      "status": "success",
+      "content": "Essence Mascara Lash Princess - 9.99$",
+      "tool_call_id": "call_jV0y1sKUhd0NrBO5jo8Z69Zu",
+      "name": "search_products",
+      "metadata": {
+        "versions": {
+          "@langchain/core": "1.2.1"
+        }
+      },
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "fd612b58-153a-4bfb-a577-bd46a7636b65"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzOT9mjnu6v43EcRjRztYBKbAyGsa",
+      "content": "Found:\n- Essence Mascara Lash Princess — 9.99$",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 955,
+          "completionTokens": 17,
+          "totalTokens": 972
+        },
+        "finish_reason": "stop",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 17,
+        "input_tokens": 955,
+        "total_tokens": 972,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "hey",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "119665f9-b350-4746-8c1e-79298be5b9ca"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzPEn6nfGgdY3lm7TA8eBq98Zcu4z",
+      "content": "Hey! How can I help?",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 980,
+          "completionTokens": 10,
+          "totalTokens": 990
+        },
+        "finish_reason": "stop",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 10,
+        "input_tokens": 980,
+        "total_tokens": 990,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "hey",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "09e9ea4e-02bf-4338-aa0f-1f438bae6684"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzPGLE2Kav914qfjlCGU5bb4S42ne",
+      "content": "Hey! How can I help?",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 998,
+          "completionTokens": 10,
+          "totalTokens": 1008
+        },
+        "finish_reason": "stop",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 10,
+        "input_tokens": 998,
+        "total_tokens": 1008,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "find phones",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "77ed26d9-da61-43d8-915e-e2278b7974ce"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzPGhK5n3L5ugzTxkxOydm6b2rZd5",
+      "content": "",
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "id": "call_iBKGuqCyNvHPJB1ioyshxxii",
+            "type": "function",
+            "function": {
+              "name": "search_products",
+              "arguments": "{\"query\":\"phones\"}"
+            }
+          }
+        ]
+      },
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 1017,
+          "completionTokens": 17,
+          "totalTokens": 1034
+        },
+        "finish_reason": "tool_calls",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [
+        {
+          "name": "search_products",
+          "args": {
+            "query": "phones"
+          },
+          "type": "tool_call",
+          "id": "call_iBKGuqCyNvHPJB1ioyshxxii"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 17,
+        "input_tokens": 1017,
+        "total_tokens": 1034,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "tool",
+    "data": {
+      "status": "success",
+      "content": "Apple AirPods Max Silver - 549.99$\nBeats Flex Wireless Earphones - 49.99$\nSelfie Stick Monopod - 12.99$\nOppo K1 - 299.99$",
+      "tool_call_id": "call_iBKGuqCyNvHPJB1ioyshxxii",
+      "name": "search_products",
+      "metadata": {
+        "versions": {
+          "@langchain/core": "1.2.1"
+        }
+      },
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "ea6112ca-542a-4946-a31c-08a54b72c04f"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzPGjRwPekarDFOFCx8f4QNjO9Sgu",
+      "content": "Found:\n- Apple AirPods Max Silver — 549.99$\n- Beats Flex Wireless Earphones — 49.99$\n- Selfie Stick Monopod — 12.99$\n- Oppo K1 — 299.99$",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 1090,
+          "completionTokens": 52,
+          "totalTokens": 1142
+        },
+        "finish_reason": "stop",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 52,
+        "input_tokens": 1090,
+        "total_tokens": 1142,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "find phones",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "70829d64-da6e-428c-a994-915f58ab6024"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzPH3iY8NZKM6WQPMXCLPXFRIzF9G",
+      "content": "",
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "id": "call_V5Dnor7uArcKX8URW8FR17N6",
+            "type": "function",
+            "function": {
+              "name": "search_products",
+              "arguments": "{\"query\":\"phones\"}"
+            }
+          }
+        ]
+      },
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 1151,
+          "completionTokens": 17,
+          "totalTokens": 1168
+        },
+        "finish_reason": "tool_calls",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [
+        {
+          "name": "search_products",
+          "args": {
+            "query": "phones"
+          },
+          "type": "tool_call",
+          "id": "call_V5Dnor7uArcKX8URW8FR17N6"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 17,
+        "input_tokens": 1151,
+        "total_tokens": 1168,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "tool",
+    "data": {
+      "status": "success",
+      "content": "Apple AirPods Max Silver - 549.99$\nBeats Flex Wireless Earphones - 49.99$\nSelfie Stick Monopod - 12.99$\nOppo K1 - 299.99$",
+      "tool_call_id": "call_V5Dnor7uArcKX8URW8FR17N6",
+      "name": "search_products",
+      "metadata": {
+        "versions": {
+          "@langchain/core": "1.2.1"
+        }
+      },
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "5d4e1763-492c-4f5a-8c36-4fdf2b4f7576"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzPH4VUUIdBmKiL2TR9lhnAzHXDS7",
+      "content": "Found:\n- Apple AirPods Max Silver — 549.99$\n- Beats Flex Wireless Earphones — 49.99$\n- Selfie Stick Monopod — 12.99$\n- Oppo K1 — 299.99$",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 1224,
+          "completionTokens": 52,
+          "totalTokens": 1276
+        },
+        "finish_reason": "stop",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 52,
+        "input_tokens": 1224,
+        "total_tokens": 1276,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "find phones",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "fe427743-2077-40e7-af51-48c08175b35a"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzPHDuInT2c34nnTcjdMCaKML8z8a",
+      "content": "",
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "id": "call_2nxsD8wqNwRJzmX7o9RQ63ag",
+            "type": "function",
+            "function": {
+              "name": "search_products",
+              "arguments": "{\"query\":\"phones\"}"
+            }
+          }
+        ]
+      },
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 1285,
+          "completionTokens": 17,
+          "totalTokens": 1302
+        },
+        "finish_reason": "tool_calls",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [
+        {
+          "name": "search_products",
+          "args": {
+            "query": "phones"
+          },
+          "type": "tool_call",
+          "id": "call_2nxsD8wqNwRJzmX7o9RQ63ag"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 17,
+        "input_tokens": 1285,
+        "total_tokens": 1302,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "tool",
+    "data": {
+      "status": "success",
+      "content": "Apple AirPods Max Silver - 549.99$\nBeats Flex Wireless Earphones - 49.99$\nSelfie Stick Monopod - 12.99$\nOppo K1 - 299.99$",
+      "tool_call_id": "call_2nxsD8wqNwRJzmX7o9RQ63ag",
+      "name": "search_products",
+      "metadata": {
+        "versions": {
+          "@langchain/core": "1.2.1"
+        }
+      },
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "511bb187-b546-4bac-a8de-ca68e06b0e7e"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzPHFSYFLgNrcvvpUT93GXuANTPXk",
+      "content": "Found:\n- Apple AirPods Max Silver — 549.99$\n- Beats Flex Wireless Earphones — 49.99$\n- Selfie Stick Monopod — 12.99$\n- Oppo K1 — 299.99$",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 1358,
+          "completionTokens": 52,
+          "totalTokens": 1410
+        },
+        "finish_reason": "stop",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 52,
+        "input_tokens": 1358,
+        "total_tokens": 1410,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 1152
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "find phones",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "aa5a8ad8-ca32-4899-9961-6df8e3a751d0"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzPHaNWHZNmWufp9oCRV6YvHnAvxj",
+      "content": "",
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "id": "call_0Y1EvCBoXDdxWpnVBtwLG1kN",
+            "type": "function",
+            "function": {
+              "name": "search_products",
+              "arguments": "{\"query\":\"phones\"}"
+            }
+          }
+        ]
+      },
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 1419,
+          "completionTokens": 17,
+          "totalTokens": 1436
+        },
+        "finish_reason": "tool_calls",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [
+        {
+          "name": "search_products",
+          "args": {
+            "query": "phones"
+          },
+          "type": "tool_call",
+          "id": "call_0Y1EvCBoXDdxWpnVBtwLG1kN"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 17,
+        "input_tokens": 1419,
+        "total_tokens": 1436,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 1152
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "tool",
+    "data": {
+      "status": "success",
+      "content": "Apple AirPods Max Silver - 549.99$\nBeats Flex Wireless Earphones - 49.99$\nSelfie Stick Monopod - 12.99$\nOppo K1 - 299.99$",
+      "tool_call_id": "call_0Y1EvCBoXDdxWpnVBtwLG1kN",
+      "name": "search_products",
+      "metadata": {
+        "versions": {
+          "@langchain/core": "1.2.1"
+        }
+      },
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "3968214a-19fd-4454-ac51-a2b6bb384982"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzPHb5IvqXEPSKpMdD0EP4TwoIZTc",
+      "content": "Found:\n- Apple AirPods Max Silver — 549.99$\n- Beats Flex Wireless Earphones — 49.99$\n- Selfie Stick Monopod — 12.99$\n- Oppo K1 — 299.99$",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 1492,
+          "completionTokens": 52,
+          "totalTokens": 1544
+        },
+        "finish_reason": "stop",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 52,
+        "input_tokens": 1492,
+        "total_tokens": 1544,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 1152
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "find phones",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "a46917f4-689e-42b4-b903-d6340ad782ec"
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "[object AIMessage]\"xxx\"",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "e1c66b6a-9799-4e7d-8e4e-ab07e668162a"
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "find phones",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "5c05a9c2-e765-421e-bd24-edecba993738"
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "\"[object AIMessage]xxx\"",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "c3e70378-d344-4f21-8d2b-aed873d74b75"
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "find phones",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "5c50e4f5-1722-41cf-a6a8-44a51f181512"
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "\"{\\\"lc\\\":1,\\\"type\\\":\\\"constructor\\\",\\\"id\\\":[\\\"langchain_core\\\",\\\"messages\\\",\\\"AIMessage\\\"],\\\"kwargs\\\":{\\\"id\\\":\\\"chatcmpl-DzQ6zCP2wePXVCOUg4vsIHqw8xG6Q\\\",\\\"content\\\":\\\"\\\",\\\"additional_kwargs\\\":{\\\"tool_calls\\\":[{\\\"id\\\":\\\"call_oANafNvsxdpy5pzxSiV7Lcu1\\\",\\\"type\\\":\\\"function\\\",\\\"function\\\":{\\\"name\\\":\\\"search_products\\\",\\\"arguments\\\":\\\"{\\\\\\\"query\\\\\\\":\\\\\\\"phones\\\\\\\"}\\\"}}]},\\\"response_metadata\\\":{\\\"tokenUsage\\\":{\\\"promptTokens\\\":1587,\\\"completionTokens\\\":17,\\\"totalTokens\\\":1604},\\\"finish_reason\\\":\\\"tool_calls\\\",\\\"model_provider\\\":\\\"openai\\\",\\\"model_name\\\":\\\"gpt-5.4-2026-03-05\\\"},\\\"type\\\":\\\"ai\\\",\\\"tool_calls\\\":[{\\\"name\\\":\\\"search_products\\\",\\\"args\\\":{\\\"query\\\":\\\"phones\\\"},\\\"type\\\":\\\"tool_call\\\",\\\"id\\\":\\\"call_oANafNvsxdpy5pzxSiV7Lcu1\\\"}],\\\"invalid_tool_calls\\\":[],\\\"usage_metadata\\\":{\\\"output_tokens\\\":17,\\\"input_tokens\\\":1587,\\\"total_tokens\\\":1604,\\\"input_token_details\\\":{\\\"audio\\\":0,\\\"cache_read\\\":0},\\\"output_token_details\\\":{\\\"audio\\\":0,\\\"reasoning\\\":0}}}}xxx\"",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "25a94708-d7ed-4354-9214-e044c1d6c006"
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "find phones",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "aff409e4-da84-4182-9390-a464af13b49a"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzQ8uXXdPd7pwDbPfjSRlSmg4G1Vk",
+      "content": "",
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "id": "call_L2U7rbO97jOzhZ3yVOwMTiX4",
+            "type": "function",
+            "function": {
+              "name": "search_products",
+              "arguments": "{\"query\":\"phones\"}"
+            }
+          }
+        ]
+      },
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 1870,
+          "completionTokens": 17,
+          "totalTokens": 1887
+        },
+        "finish_reason": "tool_calls",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [
+        {
+          "name": "search_products",
+          "args": {
+            "query": "phones"
+          },
+          "type": "tool_call",
+          "id": "call_L2U7rbO97jOzhZ3yVOwMTiX4"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 17,
+        "input_tokens": 1870,
+        "total_tokens": 1887,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 1664
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "tool",
+    "data": {
+      "status": "success",
+      "content": "Apple AirPods Max Silver - 549.99$\nBeats Flex Wireless Earphones - 49.99$\nSelfie Stick Monopod - 12.99$\nOppo K1 - 299.99$",
+      "tool_call_id": "call_L2U7rbO97jOzhZ3yVOwMTiX4",
+      "name": "search_products",
+      "metadata": {
+        "versions": {
+          "@langchain/core": "1.2.1"
+        }
+      },
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "d6d69892-12ae-4e16-a941-8ac6905704fa"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzQ8vuWHU0aHvmbAnMsSBpsOPvSS6",
+      "content": "Found:\n- Apple AirPods Max Silver — 549.99$\n- Beats Flex Wireless Earphones — 49.99$\n- Selfie Stick Monopod — 12.99$\n- Oppo K1 — 299.99$",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 1943,
+          "completionTokens": 52,
+          "totalTokens": 1995
+        },
+        "finish_reason": "stop",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 52,
+        "input_tokens": 1943,
+        "total_tokens": 1995,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 1664
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "find phones",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "a1e2734e-aad5-497c-a60c-9b75c0a511dd"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzQ98IK7VafoZJ9gIEZo5UUl4m2g6",
+      "content": "",
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "id": "call_8pyBpDs6ImZn7FwwGxJwCpLQ",
+            "type": "function",
+            "function": {
+              "name": "search_products",
+              "arguments": "{\"query\":\"phones\"}"
+            }
+          }
+        ]
+      },
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 2004,
+          "completionTokens": 17,
+          "totalTokens": 2021
+        },
+        "finish_reason": "tool_calls",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [
+        {
+          "name": "search_products",
+          "args": {
+            "query": "phones"
+          },
+          "type": "tool_call",
+          "id": "call_8pyBpDs6ImZn7FwwGxJwCpLQ"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 17,
+        "input_tokens": 2004,
+        "total_tokens": 2021,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 1664
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "tool",
+    "data": {
+      "status": "success",
+      "content": "Apple AirPods Max Silver - 549.99$\nBeats Flex Wireless Earphones - 49.99$\nSelfie Stick Monopod - 12.99$\nOppo K1 - 299.99$",
+      "tool_call_id": "call_8pyBpDs6ImZn7FwwGxJwCpLQ",
+      "name": "search_products",
+      "metadata": {
+        "versions": {
+          "@langchain/core": "1.2.1"
+        }
+      },
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "ef633d0e-af0c-48b7-b2f6-2939a868ac6b"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzQ99c0z0aOwR9t9Te9wzeBE0RQmj",
+      "content": "Found:\n- Apple AirPods Max Silver — 549.99$\n- Beats Flex Wireless Earphones — 49.99$\n- Selfie Stick Monopod — 12.99$\n- Oppo K1 — 299.99$",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 2077,
+          "completionTokens": 52,
+          "totalTokens": 2129
+        },
+        "finish_reason": "stop",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 52,
+        "input_tokens": 2077,
+        "total_tokens": 2129,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 1664
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "find phones",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "9cac137a-9577-4934-a7ba-04a97fc5675a"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzQ9uQjqBJs46NZ2BwihQuzB2vv0H",
+      "content": "",
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "id": "call_Jt4h7K5QF1oIEQyTO7xX7ysR",
+            "type": "function",
+            "function": {
+              "name": "search_products",
+              "arguments": "{\"query\":\"phones\"}"
+            }
+          }
+        ]
+      },
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 2138,
+          "completionTokens": 17,
+          "totalTokens": 2155
+        },
+        "finish_reason": "tool_calls",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [
+        {
+          "name": "search_products",
+          "args": {
+            "query": "phones"
+          },
+          "type": "tool_call",
+          "id": "call_Jt4h7K5QF1oIEQyTO7xX7ysR"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 17,
+        "input_tokens": 2138,
+        "total_tokens": 2155,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 1664
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "tool",
+    "data": {
+      "status": "success",
+      "content": "Apple AirPods Max Silver - 549.99$\nBeats Flex Wireless Earphones - 49.99$\nSelfie Stick Monopod - 12.99$\nOppo K1 - 299.99$",
+      "tool_call_id": "call_Jt4h7K5QF1oIEQyTO7xX7ysR",
+      "name": "search_products",
+      "metadata": {
+        "versions": {
+          "@langchain/core": "1.2.1"
+        }
+      },
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "97033b01-a67a-4ea4-8556-6c42d5776951"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzQ9vl2ddtyx1YHxXh7ylxAbXkeeX",
+      "content": "Found:\n- Apple AirPods Max Silver — 549.99$\n- Beats Flex Wireless Earphones — 49.99$\n- Selfie Stick Monopod — 12.99$\n- Oppo K1 — 299.99$ :) ",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 2211,
+          "completionTokens": 52,
+          "totalTokens": 2263
+        },
+        "finish_reason": "stop",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 52,
+        "input_tokens": 2211,
+        "total_tokens": 2263,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "find phones",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "c419f5e9-d40d-4962-8aec-9d51c04fd41d"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzQBb8Apos4AjtHc5Ah5sFO3vFdsR",
+      "content": "",
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "id": "call_o3vSkkCPnULJhnzX63vE3Cck",
+            "type": "function",
+            "function": {
+              "name": "search_products",
+              "arguments": "{\"query\":\"phones\"}"
+            }
+          }
+        ]
+      },
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 2274,
+          "completionTokens": 17,
+          "totalTokens": 2291
+        },
+        "finish_reason": "tool_calls",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [
+        {
+          "name": "search_products",
+          "args": {
+            "query": "phones"
+          },
+          "type": "tool_call",
+          "id": "call_o3vSkkCPnULJhnzX63vE3Cck"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 17,
+        "input_tokens": 2274,
+        "total_tokens": 2291,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 1664
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "tool",
+    "data": {
+      "status": "success",
+      "content": "Apple AirPods Max Silver - 549.99$\nBeats Flex Wireless Earphones - 49.99$\nSelfie Stick Monopod - 12.99$\nOppo K1 - 299.99$",
+      "tool_call_id": "call_o3vSkkCPnULJhnzX63vE3Cck",
+      "name": "search_products",
+      "metadata": {
+        "versions": {
+          "@langchain/core": "1.2.1"
+        }
+      },
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "ffedb28a-b9c4-429d-af58-3f1e363b912c"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzQBc0ilqvjC9LilAXuohEf7tZdtn",
+      "content": "Found:\n- Apple AirPods Max Silver — 549.99$\n- Beats Flex Wireless Earphones — 49.99$\n- Selfie Stick Monopod — 12.99$\n- Oppo K1 — 299.99$ :) ",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 2347,
+          "completionTokens": 52,
+          "totalTokens": 2399
+        },
+        "finish_reason": "stop",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 52,
+        "input_tokens": 2347,
+        "total_tokens": 2399,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 2176
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "find phones",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "28f14b64-6e0e-4bd8-9912-60c4f62a62ec"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzQBi0hwlF79Dxcy6NcQZFpGpedP0",
+      "content": "",
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "id": "call_DFjhUdSGmMKpxktmGWmVJa9w",
+            "type": "function",
+            "function": {
+              "name": "search_products",
+              "arguments": "{\"query\":\"phones\"}"
+            }
+          }
+        ]
+      },
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 2410,
+          "completionTokens": 17,
+          "totalTokens": 2427
+        },
+        "finish_reason": "tool_calls",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [
+        {
+          "name": "search_products",
+          "args": {
+            "query": "phones"
+          },
+          "type": "tool_call",
+          "id": "call_DFjhUdSGmMKpxktmGWmVJa9w"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 17,
+        "input_tokens": 2410,
+        "total_tokens": 2427,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 2176
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "tool",
+    "data": {
+      "status": "success",
+      "content": "Apple AirPods Max Silver - 549.99$\nBeats Flex Wireless Earphones - 49.99$\nSelfie Stick Monopod - 12.99$\nOppo K1 - 299.99$",
+      "tool_call_id": "call_DFjhUdSGmMKpxktmGWmVJa9w",
+      "name": "search_products",
+      "metadata": {
+        "versions": {
+          "@langchain/core": "1.2.1"
+        }
+      },
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "ea5ad410-0021-4691-81f5-04688cb021fc"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzQBjBID3WszDYOPn73Fs5HHdNrVa",
+      "content": "Found:\n- Apple AirPods Max Silver — 549.99$\n- Beats Flex Wireless Earphones — 49.99$\n- Selfie Stick Monopod — 12.99$\n- Oppo K1 — 299.99$😍",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 2483,
+          "completionTokens": 52,
+          "totalTokens": 2535
+        },
+        "finish_reason": "stop",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 52,
+        "input_tokens": 2483,
+        "total_tokens": 2535,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 2176
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "send hi in telegram",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "f1421aae-7e14-4b8c-beea-5598188cc174"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzQrGNYAJaOPAW435HZsmKejJgJe2",
+      "content": "",
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "id": "call_aSDVqTCdXwnjr0tet9qzNtyH",
+            "type": "function",
+            "function": {
+              "name": "send_telegram_message",
+              "arguments": "{\"message\":\"hi\"}"
+            }
+          }
+        ]
+      },
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 2578,
+          "completionTokens": 19,
+          "totalTokens": 2597
+        },
+        "finish_reason": "tool_calls",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [
+        {
+          "name": "send_telegram_message",
+          "args": {
+            "message": "hi"
+          },
+          "type": "tool_call",
+          "id": "call_aSDVqTCdXwnjr0tet9qzNtyH"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 19,
+        "input_tokens": 2578,
+        "total_tokens": 2597,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "tool",
+    "data": {
+      "status": "success",
+      "content": "Error: TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID missing in .env",
+      "tool_call_id": "call_aSDVqTCdXwnjr0tet9qzNtyH",
+      "name": "send_telegram_message",
+      "metadata": {
+        "versions": {
+          "@langchain/core": "1.2.1"
+        }
+      },
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "b721a601-6eac-440d-802e-68c0c3065141"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzQrHB2FTJ2uMLsE2jRCvGlgsmdMC",
+      "content": "I couldn’t send the Telegram message because the Telegram configuration is missing: `TELEGRAM_BOT_TOKEN` or `TELEGRAM_CHAT_ID`.",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 2626,
+          "completionTokens": 33,
+          "totalTokens": 2659
+        },
+        "finish_reason": "stop",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 33,
+        "input_tokens": 2626,
+        "total_tokens": 2659,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 2176
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "send hi in telegram",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "4f09a8b8-b90e-460b-bc1f-eb03db9f852f"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzQsDxBmWpBMtZgCdcv9YjF3K6va1",
+      "content": "",
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "id": "call_s4w5RZKoJX49FZ4RCnyhxZuj",
+            "type": "function",
+            "function": {
+              "name": "send_telegram_message",
+              "arguments": "{\"message\":\"hi\"}"
+            }
+          }
+        ]
+      },
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 2670,
+          "completionTokens": 19,
+          "totalTokens": 2689
+        },
+        "finish_reason": "tool_calls",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [
+        {
+          "name": "send_telegram_message",
+          "args": {
+            "message": "hi"
+          },
+          "type": "tool_call",
+          "id": "call_s4w5RZKoJX49FZ4RCnyhxZuj"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 19,
+        "input_tokens": 2670,
+        "total_tokens": 2689,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 2176
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "tool",
+    "data": {
+      "status": "success",
+      "content": "Message sent successfully",
+      "tool_call_id": "call_s4w5RZKoJX49FZ4RCnyhxZuj",
+      "name": "send_telegram_message",
+      "metadata": {
+        "versions": {
+          "@langchain/core": "1.2.1"
+        }
+      },
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "0fd94953-98a2-4b45-b270-0007c1a0526c"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzQsFh6wwpqSTzTvjrJoEIhLxgDWX",
+      "content": "Sent \"hi\" in Telegram.",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 2705,
+          "completionTokens": 10,
+          "totalTokens": 2715
+        },
+        "finish_reason": "stop",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 10,
+        "input_tokens": 2705,
+        "total_tokens": 2715,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 2176
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "send hi in telegram and then get the altest messages",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "5a663d5a-5cba-47eb-a31f-20e1406cd7d8"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzQvNPPmcIYCmzJZjNiEQcGlD1Isf",
+      "content": "",
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "id": "call_PreGQ5uqu8bxJ4I4WgKh7gOw",
+            "type": "function",
+            "function": {
+              "name": "send_telegram_message",
+              "arguments": "{\"message\":\"hi\"}"
+            }
+          }
+        ]
+      },
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 2783,
+          "completionTokens": 19,
+          "totalTokens": 2802
+        },
+        "finish_reason": "tool_calls",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [
+        {
+          "name": "send_telegram_message",
+          "args": {
+            "message": "hi"
+          },
+          "type": "tool_call",
+          "id": "call_PreGQ5uqu8bxJ4I4WgKh7gOw"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 19,
+        "input_tokens": 2783,
+        "total_tokens": 2802,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "tool",
+    "data": {
+      "status": "success",
+      "content": "Message sent successfully",
+      "tool_call_id": "call_PreGQ5uqu8bxJ4I4WgKh7gOw",
+      "name": "send_telegram_message",
+      "metadata": {
+        "versions": {
+          "@langchain/core": "1.2.1"
+        }
+      },
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "41ec51ac-7780-4a4f-96f8-0d5633dcb25a"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzQvOTobDhScYiRtSgvle25mMhrxR",
+      "content": "",
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "id": "call_PVcfgm9oAEFRRpaYkqc4D8i6",
+            "type": "function",
+            "function": {
+              "name": "get_telegram_messages",
+              "arguments": "{\"limit\":5}"
+            }
+          }
+        ]
+      },
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 2818,
+          "completionTokens": 19,
+          "totalTokens": 2837
+        },
+        "finish_reason": "tool_calls",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [
+        {
+          "name": "get_telegram_messages",
+          "args": {
+            "limit": 5
+          },
+          "type": "tool_call",
+          "id": "call_PVcfgm9oAEFRRpaYkqc4D8i6"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 19,
+        "input_tokens": 2818,
+        "total_tokens": 2837,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "tool",
+    "data": {
+      "status": "success",
+      "content": "No new messages",
+      "tool_call_id": "call_PVcfgm9oAEFRRpaYkqc4D8i6",
+      "name": "get_telegram_messages",
+      "metadata": {
+        "versions": {
+          "@langchain/core": "1.2.1"
+        }
+      },
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "1d01768c-5174-49c0-91c3-22d7792258e4"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzQvPnBPywd9BnFY8ZgGm7cqZBrbq",
+      "content": "Sent \"hi\" in Telegram.\n\nLatest messages: no new messages.",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 2853,
+          "completionTokens": 17,
+          "totalTokens": 2870
+        },
+        "finish_reason": "stop",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 17,
+        "input_tokens": 2853,
+        "total_tokens": 2870,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 2688
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "send hi in telegram",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "8d3acd60-9ff1-4f69-8582-24e3da606a70"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzQxeQ9dAq20X92p39DPNYRfSjzyM",
+      "content": "",
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "id": "call_wJeV3zttamOywrsoIow1vYki",
+            "type": "function",
+            "function": {
+              "name": "send_telegram_message",
+              "arguments": "{\"message\":\"hi\"}"
+            }
+          }
+        ]
+      },
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 2881,
+          "completionTokens": 19,
+          "totalTokens": 2900
+        },
+        "finish_reason": "tool_calls",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [
+        {
+          "name": "send_telegram_message",
+          "args": {
+            "message": "hi"
+          },
+          "type": "tool_call",
+          "id": "call_wJeV3zttamOywrsoIow1vYki"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 19,
+        "input_tokens": 2881,
+        "total_tokens": 2900,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 2688
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "tool",
+    "data": {
+      "status": "success",
+      "content": "Message sent successfully",
+      "tool_call_id": "call_wJeV3zttamOywrsoIow1vYki",
+      "name": "send_telegram_message",
+      "metadata": {
+        "versions": {
+          "@langchain/core": "1.2.1"
+        }
+      },
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "cb8e34e1-8c29-48f6-9140-7e1d85ad0a6b"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzQxgnOEDXOEqdA4M4VG39EKZPXy7",
+      "content": "Sent \"hi\" in Telegram.",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 2916,
+          "completionTokens": 10,
+          "totalTokens": 2926
+        },
+        "finish_reason": "stop",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 10,
+        "input_tokens": 2916,
+        "total_tokens": 2926,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 2688
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "read my last message in telegram",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "5b844eac-93d4-44be-8bcc-11c2ceada6b3"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzQy9MA9vTejqOjWkYmNhM7hIFAOo",
+      "content": "",
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "id": "call_UAhMzdR2mvhvYmaqG0GaNJdG",
+            "type": "function",
+            "function": {
+              "name": "get_telegram_messages",
+              "arguments": "{\"limit\":1}"
+            }
+          }
+        ]
+      },
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 2939,
+          "completionTokens": 19,
+          "totalTokens": 2958
+        },
+        "finish_reason": "tool_calls",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [
+        {
+          "name": "get_telegram_messages",
+          "args": {
+            "limit": 1
+          },
+          "type": "tool_call",
+          "id": "call_UAhMzdR2mvhvYmaqG0GaNJdG"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 19,
+        "input_tokens": 2939,
+        "total_tokens": 2958,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 2688
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "tool",
+    "data": {
+      "status": "success",
+      "content": "[2026-07-08T18:07:06.000Z] approlovo: shalom",
+      "tool_call_id": "call_UAhMzdR2mvhvYmaqG0GaNJdG",
+      "name": "get_telegram_messages",
+      "metadata": {
+        "versions": {
+          "@langchain/core": "1.2.1"
+        }
+      },
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "72614e4d-32e2-405e-9ada-68bc309fb1a9"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzQyAp5cPrdbl2rJtsCOZ4hM3sLkc",
+      "content": "Your last Telegram message was:\n\n`shalom`",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 2994,
+          "completionTokens": 13,
+          "totalTokens": 3007
+        },
+        "finish_reason": "stop",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 13,
+        "input_tokens": 2994,
+        "total_tokens": 3007,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 2688
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
   }
 ]
