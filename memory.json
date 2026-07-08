@@ -164,5 +164,119 @@
         }
       }
     }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "find Mascara",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "9a961773-5b3d-4fea-9114-339cb4d7c89b"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-Dwtqn3jcvro9oJMTrngV9e23KrDVC",
+      "content": "",
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "id": "call_dUnAopFhStLltPNWwT9vuyKj",
+            "type": "function",
+            "function": {
+              "name": "search_products",
+              "arguments": "{\"query\":\"Mascara\"}"
+            }
+          }
+        ]
+      },
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 312,
+          "completionTokens": 18,
+          "totalTokens": 330
+        },
+        "finish_reason": "tool_calls",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [
+        {
+          "name": "search_products",
+          "args": {
+            "query": "Mascara"
+          },
+          "type": "tool_call",
+          "id": "call_dUnAopFhStLltPNWwT9vuyKj"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 18,
+        "input_tokens": 312,
+        "total_tokens": 330,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "tool",
+    "data": {
+      "status": "success",
+      "content": "Essence Mascara Lash Princess - 9.99$",
+      "tool_call_id": "call_dUnAopFhStLltPNWwT9vuyKj",
+      "name": "search_products",
+      "metadata": {
+        "versions": {
+          "@langchain/core": "1.2.1"
+        }
+      },
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "d9ace67b-f9a2-4999-9da8-eeccae3d2173"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-Dwtqp0I6Aoxodlo6SK7wgqSZr8hTw",
+      "content": "Found:\n- Essence Mascara Lash Princess — 9.99$",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 353,
+          "completionTokens": 17,
+          "totalTokens": 370
+        },
+        "finish_reason": "stop",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 17,
+        "input_tokens": 353,
+        "total_tokens": 370,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
   }
 ]
