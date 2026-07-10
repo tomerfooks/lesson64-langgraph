@@ -2926,5 +2926,385 @@
         }
       }
     }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "send me a message in whatsapp",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "b6ceec54-aa4b-49bc-8d44-a68849f42e88"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzRC01UVkCcckqAjzYaRtU1q9eSL4",
+      "content": "What message would you like me to send on WhatsApp?",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 3085,
+          "completionTokens": 15,
+          "totalTokens": 3100
+        },
+        "finish_reason": "stop",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 15,
+        "input_tokens": 3085,
+        "total_tokens": 3100,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "send me a message in whatsapp: just say hi ",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "0e6edfec-e135-4ff4-b4c8-a8896bef7b53"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzRCDrXunjXoVKemR6Jk7xchtFlaA",
+      "content": "",
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "id": "call_8zDITsELT4vauk3Uf2JD2nkF",
+            "type": "function",
+            "function": {
+              "name": "send_whatsapp_message",
+              "arguments": "{\"message\":\"just say hi\"}"
+            }
+          }
+        ]
+      },
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 3118,
+          "completionTokens": 21,
+          "totalTokens": 3139
+        },
+        "finish_reason": "tool_calls",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [
+        {
+          "name": "send_whatsapp_message",
+          "args": {
+            "message": "just say hi"
+          },
+          "type": "tool_call",
+          "id": "call_8zDITsELT4vauk3Uf2JD2nkF"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 21,
+        "input_tokens": 3118,
+        "total_tokens": 3139,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "tool",
+    "data": {
+      "status": "error",
+      "content": "Error: Unexpected token '<', \"<html>\r\n<h\"... is not valid JSON\n Please fix your mistakes.",
+      "name": "send_whatsapp_message",
+      "tool_call_id": "call_8zDITsELT4vauk3Uf2JD2nkF",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "5376916e-d237-4ea7-b9ef-81d4ef120e71"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzRCFI45UUm72Tw98mJ0H8NusPJLE",
+      "content": "I couldn’t send the WhatsApp message because the WhatsApp service returned an invalid response (`not valid JSON`).",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 3173,
+          "completionTokens": 25,
+          "totalTokens": 3198
+        },
+        "finish_reason": "stop",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 25,
+        "input_tokens": 3173,
+        "total_tokens": 3198,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 2688
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "send me a message in whatsapp: just say hi",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "d47f3c8d-8c67-495c-98be-2ec76c48a409"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzRE9RqWpfA8bdJDUrmdHKSgIRuOq",
+      "content": "",
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "id": "call_om8FYfRlmjl1EW5h31AY4heS",
+            "type": "function",
+            "function": {
+              "name": "send_whatsapp_message",
+              "arguments": "{\"message\":\"just say hi\"}"
+            }
+          }
+        ]
+      },
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 3215,
+          "completionTokens": 21,
+          "totalTokens": 3236
+        },
+        "finish_reason": "tool_calls",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [
+        {
+          "name": "send_whatsapp_message",
+          "args": {
+            "message": "just say hi"
+          },
+          "type": "tool_call",
+          "id": "call_om8FYfRlmjl1EW5h31AY4heS"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 21,
+        "input_tokens": 3215,
+        "total_tokens": 3236,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 2688
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "tool",
+    "data": {
+      "status": "success",
+      "content": "Message sent successfully",
+      "tool_call_id": "call_om8FYfRlmjl1EW5h31AY4heS",
+      "name": "send_whatsapp_message",
+      "metadata": {
+        "versions": {
+          "@langchain/core": "1.2.1"
+        }
+      },
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "bea54a6e-5708-4aaf-a689-c4772d257664"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzREB8P13hqIqDX93wniUeoJzzTKy",
+      "content": "Sent the WhatsApp message: \"just say hi\"",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 3252,
+          "completionTokens": 14,
+          "totalTokens": 3266
+        },
+        "finish_reason": "stop",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 14,
+        "input_tokens": 3252,
+        "total_tokens": 3266,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 2688
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "send me a message in whatsapp: just say hi ",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "15f0de9c-695e-4f0b-8c7e-be2859974372"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzREPqiuUMtpzsyYbDDYgTUIRP7oe",
+      "content": "",
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "id": "call_JUGjbgJ09ciR2E5MYfLv9cLm",
+            "type": "function",
+            "function": {
+              "name": "send_whatsapp_message",
+              "arguments": "{\"message\":\"just say hi\"}"
+            }
+          }
+        ]
+      },
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 3284,
+          "completionTokens": 21,
+          "totalTokens": 3305
+        },
+        "finish_reason": "tool_calls",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [
+        {
+          "name": "send_whatsapp_message",
+          "args": {
+            "message": "just say hi"
+          },
+          "type": "tool_call",
+          "id": "call_JUGjbgJ09ciR2E5MYfLv9cLm"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 21,
+        "input_tokens": 3284,
+        "total_tokens": 3305,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 2688
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  },
+  {
+    "type": "tool",
+    "data": {
+      "status": "success",
+      "content": "Message sent successfully",
+      "tool_call_id": "call_JUGjbgJ09ciR2E5MYfLv9cLm",
+      "name": "send_whatsapp_message",
+      "metadata": {
+        "versions": {
+          "@langchain/core": "1.2.1"
+        }
+      },
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "c384d2b9-761a-42f0-9fe5-77c53119df93"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-DzREQEJ4Jh6gCIzKpAx9V8uzRwvhL",
+      "content": "Sent the WhatsApp message: \"just say hi\"",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {
+          "promptTokens": 3321,
+          "completionTokens": 14,
+          "totalTokens": 3335
+        },
+        "finish_reason": "stop",
+        "model_provider": "openai",
+        "model_name": "gpt-5.4-2026-03-05"
+      },
+      "type": "ai",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "output_tokens": 14,
+        "input_tokens": 3321,
+        "total_tokens": 3335,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 0
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
   }
 ]

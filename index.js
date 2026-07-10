@@ -104,6 +104,56 @@ const getTelegramMessages = tool(
   },
 );
 
+// כלי: שולח הודעת וואטסאפ דרך Green API (מזהה מופע וטוקן מ-.env).
+const sendWhatsappMessage = tool(
+  async ({ message, phone }) => {
+    const idInstance = process.env.GREEN_API_ID_INSTANCE;
+    const apiToken = process.env.GREEN_API_TOKEN;
+    const apiUrl = process.env.GREEN_API_URL || "https://api.green-api.com";
+    const targetPhone = phone || process.env.WHATSAPP_PHONE;
+
+    if (!idInstance || !apiToken)
+      return "Error: GREEN_API_ID_INSTANCE or GREEN_API_TOKEN missing in .env";
+    if (!targetPhone)
+      return "Error: no phone number given and WHATSAPP_PHONE missing in .env";
+
+    // Green API מצפה למספר בפורמט בינלאומי בלי + ועם סיומת @c.us
+    const chatId = `${targetPhone.replace(/\D/g, "")}@c.us`;
+
+    const res = await fetch(
+      `${apiUrl}/waInstance${idInstance}/sendMessage/${apiToken}`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ chatId, message }),
+      },
+    );
+
+    // Green API מחזיר HTML (לא JSON) כשהמזהה או הטוקן שגויים
+    const text = await res.text();
+    let data;
+    try {
+      data = JSON.parse(text);
+    } catch {
+      return `Error sending message: HTTP ${res.status} - ${text.slice(0, 200)}`;
+    }
+
+    if (!data.idMessage) return `Error sending message: ${JSON.stringify(data)}`;
+    return "Message sent successfully";
+  },
+  {
+    name: "send_whatsapp_message",
+    description: "שולח הודעת וואטסאפ למספר טלפון דרך Green API",
+    schema: z.object({
+      message: z.string(),
+      phone: z
+        .string()
+        .optional()
+        .describe("מספר טלפון בפורמט בינלאומי, למשל 972501234567 (ברירת מחדל מ-.env)"),
+    }),
+  },
+);
+
 const MEMORY_FILE = "memory.json";
 const SYSTEM_PROMPT_FILE = "system-prompt.json";
 
@@ -123,7 +173,12 @@ function saveMemory(messages) {
   writeFileSync(MEMORY_FILE, JSON.stringify(stored, null, 2), "utf8");
 }
 
-const tools = [searchProducts, sendTelegramMessage, getTelegramMessages];
+const tools = [
+  searchProducts,
+  sendTelegramMessage,
+  getTelegramMessages,
+  sendWhatsappMessage,
+];
 const modelWithTools = model.bindTools(tools);
 
 // 3) צומת "agent": שולח את ההודעות למודל ומחזיר את תשובתו.
