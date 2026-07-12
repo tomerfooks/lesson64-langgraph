@@ -27,132 +27,78 @@ const model = new ChatOpenAI({
   },
 });
 
+const searchProducts = async ({ query }) => {
+  const data = await fetch(
+    `https://dummyjson.com/products/search?q=${encodeURIComponent(query)}`,
+  );
+  const products = await data.json();
+  return products;
+};
+
 // 2) כלי (Tool): מחפש מוצרים לפי מילת חיפוש, דרך DummyJSON (בלי מפתח API).
-const searchProducts = tool(
-  async ({ query }) => {
-    const data = await fetch(
-      `https://dummyjson.com/products/search?q=${encodeURIComponent(query)}`,
-    ).then((res) => res.json());
-    // לוקחים עד 5 תוצאות ומחזירים שם ומחיר של כל מוצר
-    return data.products
-      .map((product) => `${product.title} - ${product.price}$`)
-      .join("\n");
-  },
-  {
-    name: "search_products",
-    description: "מחפש מוצרים בחנות לפי מילת חיפוש ומחזיר שם ומחיר",
-    schema: z.object({ query: z.string() }),
-  },
-);
+const searchProductsTool = tool(searchProducts, {
+  name: "search_products",
+  description: "מחפש מוצרים בחנות לפי מילת חיפוש ומחזיר שם ומחיר",
+  schema: z.object({ query: z.string() }),
+});
+
+const sendTelegramMessage = async ({ message }) => {
+  const token = process.env.TELEGRAM_BOT_TOKEN;
+  const chatId = process.env.TELEGRAM_CHAT_ID;
+  if (!token || !chatId)
+    return "Error: TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID missing in .env";
+
+  const data = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ chat_id: chatId, text: message }),
+  });
+
+  const result = data.json();
+  if (!result.ok) return `Error sending message: ${result.description}`;
+  return "Message sent successfully";
+};
 
 // כלי: שולח הודעה לצ'אט בטלגרם דרך ה-Bot API (טוקן ומזהה צ'אט מ-.env).
-const sendTelegramMessage = tool(
-  async ({ message }) => {
-    const token = process.env.TELEGRAM_BOT_TOKEN;
-    const chatId = process.env.TELEGRAM_CHAT_ID;
-    if (!token || !chatId)
-      return "Error: TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID missing in .env";
+const sendTelegramMessageTool = tool(sendTelegramMessage, {
+  name: "send_telegram_message",
+  description: "שולח הודעת טקסט למשתמש בטלגרם",
+  schema: z.object({ message: z.string() }),
+});
 
-    const data = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ chat_id: chatId, text: message }),
-    }).then((res) => res.json());
+const getTelegramMessages = async () => {
+  const token = process.env.TELEGRAM_BOT_TOKEN;
+  if (!token) return "Error: TELEGRAM_BOT_TOKEN missing in .env";
+  const data = await fetch(`https://api.telegram.org/bot${token}/getUpdates`);
+  const result = await data.json();
 
-    if (!data.ok) return `Error sending message: ${data.description}`;
-    return "Message sent successfully";
-  },
-  {
-    name: "send_telegram_message",
-    description: "שולח הודעת טקסט למשתמש בטלגרם",
-    schema: z.object({ message: z.string() }),
-  },
-);
+  // מסננים רק עדכונים שמכילים הודעת טקסט ולוקחים את האחרונות
+  const messages = result.result
+    .filter((update) => update.message?.text)
+    .slice(-(limit ?? 5))
+    .map((update) => {
+      const msg = update.message;
+      const from = msg.from?.username || msg.from?.first_name || "unknown";
+      const date = new Date(msg.date * 1000).toISOString();
+      return `[${date}] ${from}: ${msg.text}`;
+    });
+
+  if (!messages.length) return "No new messages";
+  return messages.join("\n");
+};
 
 // כלי: קורא את ההודעות האחרונות שנשלחו לבוט בטלגרם דרך getUpdates.
-const getTelegramMessages = tool(
-  async ({ limit }) => {
-    const token = process.env.TELEGRAM_BOT_TOKEN;
-    if (!token) return "Error: TELEGRAM_BOT_TOKEN missing in .env";
+const getTelegramMessagesTool = tool(getTelegramMessages, {
+  name: "get_telegram_messages",
+  description: "קורא את ההודעות האחרונות שנשלחו לבוט בטלגרם",
+  schema: z.object({
+    limit: z
+      .number()
+      .optional()
+      .describe("כמה הודעות אחרונות להחזיר (ברירת מחדל 5)"),
+  }),
+});
 
-    const data = await fetch(
-      `https://api.telegram.org/bot${token}/getUpdates`,
-    ).then((res) => res.json());
-
-    if (!data.ok) return `Error reading messages: ${data.description}`;
-
-    // מסננים רק עדכונים שמכילים הודעת טקסט ולוקחים את האחרונות
-    const messages = data.result
-      .filter((update) => update.message?.text)
-      .slice(-(limit ?? 5))
-      .map((update) => {
-        const msg = update.message;
-        const from = msg.from?.username || msg.from?.first_name || "unknown";
-        const date = new Date(msg.date * 1000).toISOString();
-        return `[${date}] ${from}: ${msg.text}`;
-      });
-
-    if (!messages.length) return "No new messages";
-    return messages.join("\n");
-  },
-  {
-    name: "get_telegram_messages",
-    description: "קורא את ההודעות האחרונות שנשלחו לבוט בטלגרם",
-    schema: z.object({
-      limit: z.number().optional().describe("כמה הודעות אחרונות להחזיר (ברירת מחדל 5)"),
-    }),
-  },
-);
-
-// כלי: שולח הודעת וואטסאפ דרך Green API (מזהה מופע וטוקן מ-.env).
-const sendWhatsappMessage = tool(
-  async ({ message, phone }) => {
-    const idInstance = process.env.GREEN_API_ID_INSTANCE;
-    const apiToken = process.env.GREEN_API_TOKEN;
-    const apiUrl = process.env.GREEN_API_URL || "https://api.green-api.com";
-    const targetPhone = phone || process.env.WHATSAPP_PHONE;
-
-    if (!idInstance || !apiToken)
-      return "Error: GREEN_API_ID_INSTANCE or GREEN_API_TOKEN missing in .env";
-    if (!targetPhone)
-      return "Error: no phone number given and WHATSAPP_PHONE missing in .env";
-
-    // Green API מצפה למספר בפורמט בינלאומי בלי + ועם סיומת @c.us
-    const chatId = `${targetPhone.replace(/\D/g, "")}@c.us`;
-
-    const res = await fetch(
-      `${apiUrl}/waInstance${idInstance}/sendMessage/${apiToken}`,
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ chatId, message }),
-      },
-    );
-
-    // Green API מחזיר HTML (לא JSON) כשהמזהה או הטוקן שגויים
-    const text = await res.text();
-    let data;
-    try {
-      data = JSON.parse(text);
-    } catch {
-      return `Error sending message: HTTP ${res.status} - ${text.slice(0, 200)}`;
-    }
-
-    if (!data.idMessage) return `Error sending message: ${JSON.stringify(data)}`;
-    return "Message sent successfully";
-  },
-  {
-    name: "send_whatsapp_message",
-    description: "שולח הודעת וואטסאפ למספר טלפון דרך Green API",
-    schema: z.object({
-      message: z.string(),
-      phone: z
-        .string()
-        .optional()
-        .describe("מספר טלפון בפורמט בינלאומי, למשל 972501234567 (ברירת מחדל מ-.env)"),
-    }),
-  },
-);
 
 const MEMORY_FILE = "memory.json";
 const SYSTEM_PROMPT_FILE = "system-prompt.json";
@@ -177,7 +123,6 @@ const tools = [
   searchProducts,
   sendTelegramMessage,
   getTelegramMessages,
-  sendWhatsappMessage,
 ];
 const modelWithTools = model.bindTools(tools);
 
@@ -187,23 +132,14 @@ async function callModel(state) {
   return { messages: [answer] };
 }
 
-// 4) החלטה: אם המודל ביקש כלי -> נלך לצומת "tools". אחרת -> סוף.
 function shouldContinue(state) {
   let lastMessage = state.messages[state.messages.length - 1];
-  if (lastMessage.tool_calls?.length) return "tools";
 
-
-
-  const forbiddenWords = ["Mascara", "Makeup"];
-  if (forbiddenWords.some((word) => lastMessage.content?.includes(word))) {
-    console.error("forbidden word detected in the answer, stopping the flow.");
-    return END;
-  }
+  if (lastMessage.tool_calls?.length) 
+    return "tools";
 
   return END;
 }
-
-// 1: 
 
 // 5) בונים את הגרף: agent -> (כלי?) -> agent -> ... -> סוף
 const app = new StateGraph(MessagesAnnotation)
