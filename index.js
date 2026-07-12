@@ -12,20 +12,13 @@ import {
   mapStoredMessagesToChatMessages,
 } from "@langchain/core/messages";
 
-import { ChatOpenAI } from "@langchain/openai";
 import { tool } from "@langchain/core/tools";
 import { z } from "zod";
 import dotenv from "dotenv";
 dotenv.config();
 
 // 1) המודל. שנו את משתני הסביבה כדי לעבוד עם ספק אחר.
-const model = new ChatOpenAI({
-  model: process.env.LLM_MODEL || "meta/llama-3.3-70b-instruct",
-  apiKey: process.env.LLM_API_KEY || "no-key",
-  configuration: {
-    baseURL: process.env.LLM_BASE_URL || "https://integrate.api.nvidia.com/v1",
-  },
-});
+
 
 const searchProducts = async ({ query }) => {
   const data = await fetch(
@@ -106,7 +99,7 @@ const SYSTEM_PROMPT_FILE = "system-prompt.json";
 // טוען היסטוריית הודעות מהקובץ (אם קיים) וממיר לאובייקטי הודעה של LangChain.
 function loadMemory() {
   if (!existsSync(MEMORY_FILE))
-    return [
+    return [  
       { role: "system", content: readFileSync(SYSTEM_PROMPT_FILE, "utf8") },
     ];
   const stored = JSON.parse(readFileSync(MEMORY_FILE, "utf8"));
