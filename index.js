@@ -120,9 +120,9 @@ function saveMemory(messages) {
 }
 
 const tools = [
-  searchProducts,
-  sendTelegramMessage,
-  getTelegramMessages,
+  searchProductsTool,
+  sendTelegramMessageTool,
+  getTelegramMessagesTool,
 ];
 const modelWithTools = model.bindTools(tools);
 
@@ -134,7 +134,6 @@ async function callModel(state) {
 
 function shouldContinue(state) {
   let lastMessage = state.messages[state.messages.length - 1];
-
   if (lastMessage.tool_calls?.length) 
     return "tools";
 
@@ -145,7 +144,6 @@ function shouldContinue(state) {
 const app = new StateGraph(MessagesAnnotation)
   .addNode("agent", callModel)
   .addNode("tools", new ToolNode(tools))
-
   .addEdge(START, "agent")
   .addConditionalEdges("agent", shouldContinue, { tools: "tools", [END]: END })
   .addEdge("tools", "agent")

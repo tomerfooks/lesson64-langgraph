@@ -1,0 +1,277 @@
+[
+  {
+    "type": "system",
+    "data": {
+      "content": "\"you are a helpful assistant\"",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "4365cff6-e8a9-45c2-b4a3-a901dacecd1c"
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "e82311e4-6411-4705-9818-eeebf667c374"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-1783872775232874616",
+      "content": "Hello! I'm ready to help you. What would you like me to do?",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {},
+        "finish_reason": "stop",
+        "model_provider": "openai",
+        "model_name": "glm-5.2"
+      },
+      "type": "ai",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "input_token_details": {},
+        "output_token_details": {}
+      }
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "find phones",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "42e287fb-895c-4e3b-82a1-8d9d95ba4546"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-1783872789316439326",
+      "content": "I'd be happy to help you find phones! However, I need a bit more context to assist you effectively:\n\n1. **What type of phones** are you looking for?\n   - Smartphones (e.g., iPhone, Samsung Galaxy, Google Pixel)?\n   - Landline phones?\n   - Used/refurbished or new?\n\n2. **What are you using to search?** \n   - A specific website or app?\n   - A database or API I should query?\n   - General web search?\n\n3. **Any preferences?**\n   - Budget range?\n   - Specific brand or model?\n   - Features (camera quality, battery life, etc.)?\n\nPlease provide more details so I can better assist you!",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {},
+        "finish_reason": "stop",
+        "model_provider": "openai",
+        "model_name": "glm-5.2"
+      },
+      "type": "ai",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "input_token_details": {},
+        "output_token_details": {}
+      }
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "find smartphones under 500$",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "00eb7e50-2342-4259-990c-2818e1e1a773"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-1783872808119785111",
+      "content": "I appreciate the request! Unfortunately, my available tools don't include a product search or web search capability that would let me look up current smartphone listings and prices for you.\n\nHowever, based on my general knowledge, here are some smartphones that are typically priced under **$500**:\n\n### Budget-Friendly Smartphones (Under $500)\n\n| **Phone** | **Approx. Price** | **Key Features** |\n|---|---|---|\n| **Google Pixel 7a** | ~$499 | Great camera, clean Android, wireless charging |\n| **Samsung Galaxy A54 5G** | ~$350-$450 | AMOLED display, long battery life, 5G |\n| **OnePlus Nord N30 5G** | ~$250-$300 | Fast charging, 5G, large display |\n| **Motorola Moto G Power 5G** | ~$250-$300 | Big battery, budget-friendly |\n| **Google Pixel 6a** | ~$350-$400 | Excellent camera, compact size |\n| **Samsung Galaxy A14 5G** | ~$150-$200 | Very affordable, 5G, decent display |\n| **Nothing Phone (2a)** | ~$349 | Unique design, clean UI, good value |\n\n### Tips for Finding Deals:\n- Check **Amazon**, **Best Buy**, or **B&H Photo Video** for discounts\n- Look for **refurbished** options on sites like Back Market or Amazon Renewed\n- Carrier deals (e.g., T-Mobile, Verizon) may offer phones at a discount with a plan\n- Trade-in your old phone to reduce the cost\n\nWould you like more details on any of these phones, or is there anything else I can help with?",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {},
+        "finish_reason": "stop",
+        "model_provider": "openai",
+        "model_name": "glm-5.2"
+      },
+      "type": "ai",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "input_token_details": {},
+        "output_token_details": {}
+      }
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "find smartphones under 500$",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "1fa457f6-cd5c-4f20-904c-a491935bf9b7"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-1783872854966999615",
+      "content": "Let me search the store for smartphones for you!",
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"query\":\"smartphones under 500\"}",
+              "name": "search_products"
+            },
+            "id": "call_1783872854966974374",
+            "type": "function"
+          }
+        ]
+      },
+      "response_metadata": {
+        "tokenUsage": {},
+        "finish_reason": "tool_calls",
+        "model_provider": "openai",
+        "model_name": "glm-5.2"
+      },
+      "type": "ai",
+      "tool_calls": [
+        {
+          "name": "search_products",
+          "args": {
+            "query": "smartphones under 500"
+          },
+          "type": "tool_call",
+          "id": "call_1783872854966974374"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "input_token_details": {},
+        "output_token_details": {}
+      }
+    }
+  },
+  {
+    "type": "tool",
+    "data": {
+      "status": "success",
+      "content": "{\"products\":[],\"total\":0,\"skip\":0,\"limit\":0}",
+      "tool_call_id": "call_1783872854966974374",
+      "name": "search_products",
+      "metadata": {
+        "versions": {
+          "@langchain/core": "1.2.1"
+        }
+      },
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "a90f8a7b-bb56-441a-a014-387fec746ebf"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-1783872856958907991",
+      "content": "No results for that search. Let me try a broader search to see what's available in the store.",
+      "additional_kwargs": {
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"query\":\"smartphone\"}",
+              "name": "search_products"
+            },
+            "id": "call_1783872856958882591",
+            "type": "function"
+          }
+        ]
+      },
+      "response_metadata": {
+        "tokenUsage": {},
+        "finish_reason": "tool_calls",
+        "model_provider": "openai",
+        "model_name": "glm-5.2"
+      },
+      "type": "ai",
+      "tool_calls": [
+        {
+          "name": "search_products",
+          "args": {
+            "query": "smartphone"
+          },
+          "type": "tool_call",
+          "id": "call_1783872856958882591"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "input_token_details": {},
+        "output_token_details": {}
+      }
+    }
+  },
+  {
+    "type": "tool",
+    "data": {
+      "status": "success",
+      "content": "{\"products\":[{\"id\":111,\"title\":\"Selfie Stick Monopod\",\"description\":\"The Selfie Stick Monopod is a extendable and foldable device for capturing the perfect selfie or group photo. Compatible with smartphones and cameras.\",\"category\":\"mobile-accessories\",\"price\":12.99,\"discountPercentage\":19.12,\"rating\":3.88,\"stock\":11,\"tags\":[\"electronics\",\"selfie accessories\"],\"brand\":\"SnapTech\",\"sku\":\"MOB-SNA-SEL-111\",\"weight\":2,\"dimensions\":{\"width\":24.76,\"height\":26.38,\"depth\":21.39},\"warrantyInformation\":\"3 year warranty\",\"shippingInformation\":\"Ships in 1-2 business days\",\"availabilityStatus\":\"In Stock\",\"reviews\":[{\"rating\":4,\"comment\":\"Great product!\",\"date\":\"2025-04-30T09:41:02.053Z\",\"reviewerName\":\"Ryan Graham\",\"reviewerEmail\":\"ryan.graham@x.dummyjson.com\"},{\"rating\":4,\"comment\":\"Great product!\",\"date\":\"2025-04-30T09:41:02.053Z\",\"reviewerName\":\"Nora Russell\",\"reviewerEmail\":\"nora.russell@x.dummyjson.com\"},{\"rating\":1,\"comment\":\"Very dissatisfied!\",\"date\":\"2025-04-30T09:41:02.053Z\",\"reviewerName\":\"Luna Perez\",\"reviewerEmail\":\"luna.perez@x.dummyjson.com\"}],\"returnPolicy\":\"30 days return policy\",\"minimumOrderQuantity\":8,\"meta\":{\"createdAt\":\"2025-04-30T09:41:02.053Z\",\"updatedAt\":\"2025-04-30T09:41:02.053Z\",\"barcode\":\"7063982050226\",\"qrCode\":\"https://cdn.dummyjson.com/public/qr-code.png\"},\"images\":[\"https://cdn.dummyjson.com/product-images/mobile-accessories/selfie-stick-monopod/1.webp\"],\"thumbnail\":\"https://cdn.dummyjson.com/product-images/mobile-accessories/selfie-stick-monopod/thumbnail.webp\"},{\"id\":121,\"title\":\"iPhone 5s\",\"description\":\"The iPhone 5s is a classic smartphone known for its compact design and advanced features during its release. While it's an older model, it still provides a reliable user experience.\",\"category\":\"smartphones\",\"price\":199.99,\"discountPercentage\":12.91,\"rating\":2.83,\"stock\":25,\"tags\":[\"smartphones\",\"apple\"],\"brand\":\"Apple\",\"sku\":\"SMA-APP-IPH-121\",\"weight\":2,\"dimensions\":{\"width\":5.29,\"height\":18.38,\"depth\":17.72},\"warrantyInformation\":\"Lifetime warranty\",\"shippingInformation\":\"Ships in 1 month\",\"availabilityStatus\":\"In Stock\",\"reviews\":[{\"rating\":5,\"comment\":\"Highly recommended!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Jace Smith\",\"reviewerEmail\":\"jace.smith@x.dummyjson.com\"},{\"rating\":1,\"comment\":\"Not as described!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Logan Torres\",\"reviewerEmail\":\"logan.torres@x.dummyjson.com\"},{\"rating\":5,\"comment\":\"Very satisfied!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Harper Kelly\",\"reviewerEmail\":\"harper.kelly@x.dummyjson.com\"}],\"returnPolicy\":\"60 days return policy\",\"minimumOrderQuantity\":3,\"meta\":{\"createdAt\":\"2025-04-30T09:41:02.054Z\",\"updatedAt\":\"2025-04-30T09:41:02.054Z\",\"barcode\":\"8814683940853\",\"qrCode\":\"https://cdn.dummyjson.com/public/qr-code.png\"},\"images\":[\"https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/1.webp\",\"https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/2.webp\",\"https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/3.webp\"],\"thumbnail\":\"https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/thumbnail.webp\"},{\"id\":122,\"title\":\"iPhone 6\",\"description\":\"The iPhone 6 is a stylish and capable smartphone with a larger display and improved performance. It introduced new features and design elements, making it a popular choice in its time.\",\"category\":\"smartphones\",\"price\":299.99,\"discountPercentage\":6.69,\"rating\":3.41,\"stock\":60,\"tags\":[\"smartphones\",\"apple\"],\"brand\":\"Apple\",\"sku\":\"SMA-APP-IPH-122\",\"weight\":7,\"dimensions\":{\"width\":11,\"height\":9.1,\"depth\":9.67},\"warrantyInformation\":\"1 month warranty\",\"shippingInformation\":\"Ships overnight\",\"availabilityStatus\":\"In Stock\",\"reviews\":[{\"rating\":3,\"comment\":\"Disappointing product!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Stella Morris\",\"reviewerEmail\":\"stella.morris@x.dummyjson.com\"},{\"rating\":4,\"comment\":\"Excellent quality!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Nolan Gonzalez\",\"reviewerEmail\":\"nolan.gonzalez@x.dummyjson.com\"},{\"rating\":5,\"comment\":\"Great value for money!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Benjamin Foster\",\"reviewerEmail\":\"benjamin.foster@x.dummyjson.com\"}],\"returnPolicy\":\"7 days return policy\",\"minimumOrderQuantity\":5,\"meta\":{\"createdAt\":\"2025-04-30T09:41:02.054Z\",\"updatedAt\":\"2025-04-30T09:41:02.054Z\",\"barcode\":\"9922357685013\",\"qrCode\":\"https://cdn.dummyjson.com/public/qr-code.png\"},\"images\":[\"https://cdn.dummyjson.com/product-images/smartphones/iphone-6/1.webp\",\"https://cdn.dummyjson.com/product-images/smartphones/iphone-6/2.webp\",\"https://cdn.dummyjson.com/product-images/smartphones/iphone-6/3.webp\"],\"thumbnail\":\"https://cdn.dummyjson.com/product-images/smartphones/iphone-6/thumbnail.webp\"},{\"id\":123,\"title\":\"iPhone 13 Pro\",\"description\":\"The iPhone 13 Pro is a cutting-edge smartphone with a powerful camera system, high-performance chip, and stunning display. It offers advanced features for users who demand top-notch technology.\",\"category\":\"smartphones\",\"price\":1099.99,\"discountPercentage\":9.37,\"rating\":4.12,\"stock\":56,\"tags\":[\"smartphones\",\"apple\"],\"brand\":\"Apple\",\"sku\":\"SMA-APP-IPH-123\",\"weight\":8,\"dimensions\":{\"width\":12.63,\"height\":5.28,\"depth\":14.29},\"warrantyInformation\":\"3 year warranty\",\"shippingInformation\":\"Ships in 2 weeks\",\"availabilityStatus\":\"In Stock\",\"reviews\":[{\"rating\":5,\"comment\":\"Would buy again!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Christian Perez\",\"reviewerEmail\":\"christian.perez@x.dummyjson.com\"},{\"rating\":3,\"comment\":\"Not worth the price!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Liam Gonzalez\",\"reviewerEmail\":\"liam.gonzalez@x.dummyjson.com\"},{\"rating\":5,\"comment\":\"Very satisfied!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Tristan Scott\",\"reviewerEmail\":\"tristan.scott@x.dummyjson.com\"}],\"returnPolicy\":\"7 days return policy\",\"minimumOrderQuantity\":1,\"meta\":{\"createdAt\":\"2025-04-30T09:41:02.054Z\",\"updatedAt\":\"2025-04-30T09:41:02.054Z\",\"barcode\":\"4998438802308\",\"qrCode\":\"https://cdn.dummyjson.com/public/qr-code.png\"},\"images\":[\"https://cdn.dummyjson.com/product-images/smartphones/iphone-13-pro/1.webp\",\"https://cdn.dummyjson.com/product-images/smartphones/iphone-13-pro/2.webp\",\"https://cdn.dummyjson.com/product-images/smartphones/iphone-13-pro/3.webp\"],\"thumbnail\":\"https://cdn.dummyjson.com/product-images/smartphones/iphone-13-pro/thumbnail.webp\"},{\"id\":124,\"title\":\"iPhone X\",\"description\":\"The iPhone X is a flagship smartphone featuring a bezel-less OLED display, facial recognition technology (Face ID), and impressive performance. It represents a milestone in iPhone design and innovation.\",\"category\":\"smartphones\",\"price\":899.99,\"discountPercentage\":19.59,\"rating\":2.51,\"stock\":37,\"tags\":[\"smartphones\",\"apple\"],\"brand\":\"Apple\",\"sku\":\"SMA-APP-IPH-124\",\"weight\":1,\"dimensions\":{\"width\":21.88,\"height\":24.19,\"depth\":14.19},\"warrantyInformation\":\"3 months warranty\",\"shippingInformation\":\"Ships in 3-5 business days\",\"availabilityStatus\":\"In Stock\",\"reviews\":[{\"rating\":4,\"comment\":\"Highly recommended!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Tyler Davis\",\"reviewerEmail\":\"tyler.davis@x.dummyjson.com\"},{\"rating\":5,\"comment\":\"Great product!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Aria Parker\",\"reviewerEmail\":\"aria.parker@x.dummyjson.com\"},{\"rating\":2,\"comment\":\"Not as described!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Lily Torres\",\"reviewerEmail\":\"lily.torres@x.dummyjson.com\"}],\"returnPolicy\":\"7 days return policy\",\"minimumOrderQuantity\":2,\"meta\":{\"createdAt\":\"2025-04-30T09:41:02.054Z\",\"updatedAt\":\"2025-04-30T09:41:02.054Z\",\"barcode\":\"3034949322264\",\"qrCode\":\"https://cdn.dummyjson.com/public/qr-code.png\"},\"images\":[\"https://cdn.dummyjson.com/product-images/smartphones/iphone-x/1.webp\",\"https://cdn.dummyjson.com/product-images/smartphones/iphone-x/2.webp\",\"https://cdn.dummyjson.com/product-images/smartphones/iphone-x/3.webp\"],\"thumbnail\":\"https://cdn.dummyjson.com/product-images/smartphones/iphone-x/thumbnail.webp\"},{\"id\":125,\"title\":\"Oppo A57\",\"description\":\"The Oppo A57 is a mid-range smartphone known for its sleek design and capable features. It offers a balance of performance and affordability, making it a popular choice.\",\"category\":\"smartphones\",\"price\":249.99,\"discountPercentage\":2.43,\"rating\":3.94,\"stock\":19,\"tags\":[\"smartphones\",\"oppo\"],\"brand\":\"Oppo\",\"sku\":\"SMA-OPP-OPP-125\",\"weight\":5,\"dimensions\":{\"width\":7.2,\"height\":10.74,\"depth\":23.68},\"warrantyInformation\":\"Lifetime warranty\",\"shippingInformation\":\"Ships in 3-5 business days\",\"availabilityStatus\":\"In Stock\",\"reviews\":[{\"rating\":4,\"comment\":\"Excellent quality!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Scarlett Wright\",\"reviewerEmail\":\"scarlett.wright@x.dummyjson.com\"},{\"rating\":5,\"comment\":\"Excellent quality!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Jacob Cooper\",\"reviewerEmail\":\"jacob.cooper@x.dummyjson.com\"},{\"rating\":2,\"comment\":\"Poor quality!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Zoe Nicholson\",\"reviewerEmail\":\"zoe.nicholson@x.dummyjson.com\"}],\"returnPolicy\":\"90 days return policy\",\"minimumOrderQuantity\":3,\"meta\":{\"createdAt\":\"2025-04-30T09:41:02.054Z\",\"updatedAt\":\"2025-04-30T09:41:02.054Z\",\"barcode\":\"0651223722522\",\"qrCode\":\"https://cdn.dummyjson.com/public/qr-code.png\"},\"images\":[\"https://cdn.dummyjson.com/product-images/smartphones/oppo-a57/1.webp\",\"https://cdn.dummyjson.com/product-images/smartphones/oppo-a57/2.webp\",\"https://cdn.dummyjson.com/product-images/smartphones/oppo-a57/3.webp\"],\"thumbnail\":\"https://cdn.dummyjson.com/product-images/smartphones/oppo-a57/thumbnail.webp\"},{\"id\":126,\"title\":\"Oppo F19 Pro Plus\",\"description\":\"The Oppo F19 Pro Plus is a feature-rich smartphone with a focus on camera capabilities. It boasts advanced photography features and a powerful performance for a premium user experience.\",\"category\":\"smartphones\",\"price\":399.99,\"discountPercentage\":18.64,\"rating\":3.51,\"stock\":78,\"tags\":[\"smartphones\",\"oppo\"],\"brand\":\"Oppo\",\"sku\":\"SMA-OPP-OPP-126\",\"weight\":6,\"dimensions\":{\"width\":6.78,\"height\":25.17,\"depth\":8.4},\"warrantyInformation\":\"3 year warranty\",\"shippingInformation\":\"Ships in 1 week\",\"availabilityStatus\":\"In Stock\",\"reviews\":[{\"rating\":5,\"comment\":\"Very happy with my purchase!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Emily Johnson\",\"reviewerEmail\":\"emily.johnson@x.dummyjson.com\"},{\"rating\":5,\"comment\":\"Highly recommended!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Jaxon Barnes\",\"reviewerEmail\":\"jaxon.barnes@x.dummyjson.com\"},{\"rating\":4,\"comment\":\"Would buy again!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Nova Cooper\",\"reviewerEmail\":\"nova.cooper@x.dummyjson.com\"}],\"returnPolicy\":\"90 days return policy\",\"minimumOrderQuantity\":1,\"meta\":{\"createdAt\":\"2025-04-30T09:41:02.054Z\",\"updatedAt\":\"2025-04-30T09:41:02.054Z\",\"barcode\":\"8576893968169\",\"qrCode\":\"https://cdn.dummyjson.com/public/qr-code.png\"},\"images\":[\"https://cdn.dummyjson.com/product-images/smartphones/oppo-f19-pro-plus/1.webp\",\"https://cdn.dummyjson.com/product-images/smartphones/oppo-f19-pro-plus/2.webp\",\"https://cdn.dummyjson.com/product-images/smartphones/oppo-f19-pro-plus/3.webp\"],\"thumbnail\":\"https://cdn.dummyjson.com/product-images/smartphones/oppo-f19-pro-plus/thumbnail.webp\"},{\"id\":127,\"title\":\"Oppo K1\",\"description\":\"The Oppo K1 series offers a range of smartphones with various features and specifications. Known for their stylish design and reliable performance, the Oppo K1 series caters to diverse user preferences.\",\"category\":\"smartphones\",\"price\":299.99,\"discountPercentage\":18.29,\"rating\":4.25,\"stock\":55,\"tags\":[\"smartphones\",\"oppo\"],\"brand\":\"Oppo\",\"sku\":\"SMA-OPP-OPP-127\",\"weight\":5,\"dimensions\":{\"width\":13.89,\"height\":10.63,\"depth\":16.6},\"warrantyInformation\":\"1 month warranty\",\"shippingInformation\":\"Ships in 1-2 business days\",\"availabilityStatus\":\"In Stock\",\"reviews\":[{\"rating\":4,\"comment\":\"Very pleased!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Christopher West\",\"reviewerEmail\":\"christopher.west@x.dummyjson.com\"},{\"rating\":4,\"comment\":\"Highly recommended!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Mia Miller\",\"reviewerEmail\":\"mia.miller@x.dummyjson.com\"},{\"rating\":2,\"comment\":\"Very dissatisfied!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Ella Adams\",\"reviewerEmail\":\"ella.adams@x.dummyjson.com\"}],\"returnPolicy\":\"30 days return policy\",\"minimumOrderQuantity\":5,\"meta\":{\"createdAt\":\"2025-04-30T09:41:02.054Z\",\"updatedAt\":\"2025-04-30T09:41:02.054Z\",\"barcode\":\"3106827888743\",\"qrCode\":\"https://cdn.dummyjson.com/public/qr-code.png\"},\"images\":[\"https://cdn.dummyjson.com/product-images/smartphones/oppo-k1/1.webp\",\"https://cdn.dummyjson.com/product-images/smartphones/oppo-k1/2.webp\",\"https://cdn.dummyjson.com/product-images/smartphones/oppo-k1/3.webp\",\"https://cdn.dummyjson.com/product-images/smartphones/oppo-k1/4.webp\"],\"thumbnail\":\"https://cdn.dummyjson.com/product-images/smartphones/oppo-k1/thumbnail.webp\"},{\"id\":128,\"title\":\"Realme C35\",\"description\":\"The Realme C35 is a budget-friendly smartphone with a focus on providing essential features for everyday use. It offers a reliable performance and user-friendly experience.\",\"category\":\"smartphones\",\"price\":149.99,\"discountPercentage\":15.3,\"rating\":4.2,\"stock\":48,\"tags\":[\"smartphones\",\"realme\"],\"brand\":\"Realme\",\"sku\":\"SMA-REA-REA-128\",\"weight\":2,\"dimensions\":{\"width\":25.28,\"height\":8.14,\"depth\":29.53},\"warrantyInformation\":\"3 year warranty\",\"shippingInformation\":\"Ships overnight\",\"availabilityStatus\":\"In Stock\",\"reviews\":[{\"rating\":4,\"comment\":\"Great product!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Penelope King\",\"reviewerEmail\":\"penelope.king@x.dummyjson.com\"},{\"rating\":2,\"comment\":\"Very unhappy with my purchase!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Asher Scott\",\"reviewerEmail\":\"asher.scott@x.dummyjson.com\"},{\"rating\":4,\"comment\":\"Highly impressed!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Henry Adams\",\"reviewerEmail\":\"henry.adams@x.dummyjson.com\"}],\"returnPolicy\":\"90 days return policy\",\"minimumOrderQuantity\":3,\"meta\":{\"createdAt\":\"2025-04-30T09:41:02.054Z\",\"updatedAt\":\"2025-04-30T09:41:02.054Z\",\"barcode\":\"7825844344364\",\"qrCode\":\"https://cdn.dummyjson.com/public/qr-code.png\"},\"images\":[\"https://cdn.dummyjson.com/product-images/smartphones/realme-c35/1.webp\",\"https://cdn.dummyjson.com/product-images/smartphones/realme-c35/2.webp\",\"https://cdn.dummyjson.com/product-images/smartphones/realme-c35/3.webp\"],\"thumbnail\":\"https://cdn.dummyjson.com/product-images/smartphones/realme-c35/thumbnail.webp\"},{\"id\":129,\"title\":\"Realme X\",\"description\":\"The Realme X is a mid-range smartphone known for its sleek design and impressive display. It offers a good balance of performance and camera capabilities for users seeking a quality device.\",\"category\":\"smartphones\",\"price\":299.99,\"discountPercentage\":6.95,\"rating\":3.7,\"stock\":12,\"tags\":[\"smartphones\",\"realme\"],\"brand\":\"Realme\",\"sku\":\"SMA-REA-REA-129\",\"weight\":4,\"dimensions\":{\"width\":25.59,\"height\":21.42,\"depth\":12.75},\"warrantyInformation\":\"1 month warranty\",\"shippingInformation\":\"Ships in 3-5 business days\",\"availabilityStatus\":\"In Stock\",\"reviews\":[{\"rating\":5,\"comment\":\"Would buy again!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Hazel Evans\",\"reviewerEmail\":\"hazel.evans@x.dummyjson.com\"},{\"rating\":5,\"comment\":\"Fast shipping!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Brayden Fleming\",\"reviewerEmail\":\"brayden.fleming@x.dummyjson.com\"},{\"rating\":5,\"comment\":\"Very satisfied!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Madison Stewart\",\"reviewerEmail\":\"madison.stewart@x.dummyjson.com\"}],\"returnPolicy\":\"No return policy\",\"minimumOrderQuantity\":3,\"meta\":{\"createdAt\":\"2025-04-30T09:41:02.054Z\",\"updatedAt\":\"2025-04-30T09:41:02.054Z\",\"barcode\":\"4948452391831\",\"qrCode\":\"https://cdn.dummyjson.com/public/qr-code.png\"},\"images\":[\"https://cdn.dummyjson.com/product-images/smartphones/realme-x/1.webp\",\"https://cdn.dummyjson.com/product-images/smartphones/realme-x/2.webp\",\"https://cdn.dummyjson.com/product-images/smartphones/realme-x/3.webp\"],\"thumbnail\":\"https://cdn.dummyjson.com/product-images/smartphones/realme-x/thumbnail.webp\"},{\"id\":130,\"title\":\"Realme XT\",\"description\":\"The Realme XT is a feature-rich smartphone with a focus on camera technology. It comes equipped with advanced camera sensors, delivering high-quality photos and videos for photography enthusiasts.\",\"category\":\"smartphones\",\"price\":349.99,\"discountPercentage\":11.51,\"rating\":4.58,\"stock\":80,\"tags\":[\"smartphones\",\"realme\"],\"brand\":\"Realme\",\"sku\":\"SMA-REA-REA-130\",\"weight\":3,\"dimensions\":{\"width\":24.98,\"height\":26.73,\"depth\":6.5},\"warrantyInformation\":\"3 year warranty\",\"shippingInformation\":\"Ships in 1 month\",\"availabilityStatus\":\"In Stock\",\"reviews\":[{\"rating\":4,\"comment\":\"Very satisfied!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Emily Brown\",\"reviewerEmail\":\"emily.brown@x.dummyjson.com\"},{\"rating\":3,\"comment\":\"Not as described!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Ella Cook\",\"reviewerEmail\":\"ella.cook@x.dummyjson.com\"},{\"rating\":5,\"comment\":\"Would buy again!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Layla Sullivan\",\"reviewerEmail\":\"layla.sullivan@x.dummyjson.com\"}],\"returnPolicy\":\"60 days return policy\",\"minimumOrderQuantity\":3,\"meta\":{\"createdAt\":\"2025-04-30T09:41:02.054Z\",\"updatedAt\":\"2025-04-30T09:41:02.054Z\",\"barcode\":\"6151817227632\",\"qrCode\":\"https://cdn.dummyjson.com/public/qr-code.png\"},\"images\":[\"https://cdn.dummyjson.com/product-images/smartphones/realme-xt/1.webp\",\"https://cdn.dummyjson.com/product-images/smartphones/realme-xt/2.webp\",\"https://cdn.dummyjson.com/product-images/smartphones/realme-xt/3.webp\"],\"thumbnail\":\"https://cdn.dummyjson.com/product-images/smartphones/realme-xt/thumbnail.webp\"},{\"id\":131,\"title\":\"Samsung Galaxy S7\",\"description\":\"The Samsung Galaxy S7 is a flagship smartphone known for its sleek design and advanced features. It features a high-resolution display, powerful camera, and robust performance.\",\"category\":\"smartphones\",\"price\":299.99,\"discountPercentage\":19.55,\"rating\":3.3,\"stock\":67,\"tags\":[\"smartphones\",\"samsung galaxy\"],\"brand\":\"Samsung\",\"sku\":\"SMA-SAM-SAM-131\",\"weight\":10,\"dimensions\":{\"width\":13.55,\"height\":24.24,\"depth\":5.63},\"warrantyInformation\":\"3 months warranty\",\"shippingInformation\":\"Ships in 3-5 business days\",\"availabilityStatus\":\"In Stock\",\"reviews\":[{\"rating\":1,\"comment\":\"Not as described!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Julian James\",\"reviewerEmail\":\"julian.james@x.dummyjson.com\"},{\"rating\":4,\"comment\":\"Fast shipping!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Lucas Gordon\",\"reviewerEmail\":\"lucas.gordon@x.dummyjson.com\"},{\"rating\":4,\"comment\":\"Excellent quality!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Ava Taylor\",\"reviewerEmail\":\"ava.taylor@x.dummyjson.com\"}],\"returnPolicy\":\"No return policy\",\"minimumOrderQuantity\":1,\"meta\":{\"createdAt\":\"2025-04-30T09:41:02.054Z\",\"updatedAt\":\"2025-04-30T09:41:02.054Z\",\"barcode\":\"7557912146622\",\"qrCode\":\"https://cdn.dummyjson.com/public/qr-code.png\"},\"images\":[\"https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s7/1.webp\",\"https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s7/2.webp\",\"https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s7/3.webp\"],\"thumbnail\":\"https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s7/thumbnail.webp\"},{\"id\":132,\"title\":\"Samsung Galaxy S8\",\"description\":\"The Samsung Galaxy S8 is a premium smartphone with an Infinity Display, offering a stunning visual experience. It boasts advanced camera capabilities and cutting-edge technology.\",\"category\":\"smartphones\",\"price\":499.99,\"discountPercentage\":19.45,\"rating\":4.4,\"stock\":0,\"tags\":[\"smartphones\",\"samsung galaxy\"],\"brand\":\"Samsung\",\"sku\":\"SMA-SAM-SAM-132\",\"weight\":6,\"dimensions\":{\"width\":23.05,\"height\":26.88,\"depth\":15.73},\"warrantyInformation\":\"2 year warranty\",\"shippingInformation\":\"Ships in 1 week\",\"availabilityStatus\":\"Out of Stock\",\"reviews\":[{\"rating\":4,\"comment\":\"Highly impressed!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Owen Fisher\",\"reviewerEmail\":\"owen.fisher@x.dummyjson.com\"},{\"rating\":4,\"comment\":\"Highly impressed!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Clara Berry\",\"reviewerEmail\":\"clara.berry@x.dummyjson.com\"},{\"rating\":4,\"comment\":\"Highly recommended!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Tyler Davis\",\"reviewerEmail\":\"tyler.davis@x.dummyjson.com\"}],\"returnPolicy\":\"No return policy\",\"minimumOrderQuantity\":4,\"meta\":{\"createdAt\":\"2025-04-30T09:41:02.054Z\",\"updatedAt\":\"2025-04-30T09:41:02.054Z\",\"barcode\":\"5995499013336\",\"qrCode\":\"https://cdn.dummyjson.com/public/qr-code.png\"},\"images\":[\"https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s8/1.webp\",\"https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s8/2.webp\",\"https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s8/3.webp\"],\"thumbnail\":\"https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s8/thumbnail.webp\"},{\"id\":133,\"title\":\"Samsung Galaxy S10\",\"description\":\"The Samsung Galaxy S10 is a flagship device featuring a dynamic AMOLED display, versatile camera system, and powerful performance. It represents innovation and excellence in smartphone technology.\",\"category\":\"smartphones\",\"price\":699.99,\"discountPercentage\":5.59,\"rating\":3.06,\"stock\":19,\"tags\":[\"smartphones\",\"samsung galaxy\"],\"brand\":\"Samsung\",\"sku\":\"SMA-SAM-SAM-133\",\"weight\":9,\"dimensions\":{\"width\":27.41,\"height\":15.26,\"depth\":27.02},\"warrantyInformation\":\"No warranty\",\"shippingInformation\":\"Ships in 2 weeks\",\"availabilityStatus\":\"In Stock\",\"reviews\":[{\"rating\":4,\"comment\":\"Excellent quality!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Tristan Scott\",\"reviewerEmail\":\"tristan.scott@x.dummyjson.com\"},{\"rating\":5,\"comment\":\"Would buy again!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Christopher West\",\"reviewerEmail\":\"christopher.west@x.dummyjson.com\"},{\"rating\":2,\"comment\":\"Would not recommend!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Amelia Perez\",\"reviewerEmail\":\"amelia.perez@x.dummyjson.com\"}],\"returnPolicy\":\"30 days return policy\",\"minimumOrderQuantity\":2,\"meta\":{\"createdAt\":\"2025-04-30T09:41:02.054Z\",\"updatedAt\":\"2025-04-30T09:41:02.054Z\",\"barcode\":\"4676898229465\",\"qrCode\":\"https://cdn.dummyjson.com/public/qr-code.png\"},\"images\":[\"https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s10/1.webp\",\"https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s10/2.webp\",\"https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s10/3.webp\"],\"thumbnail\":\"https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s10/thumbnail.webp\"},{\"id\":134,\"title\":\"Vivo S1\",\"description\":\"The Vivo S1 is a stylish and mid-range smartphone offering a blend of design and performance. It features a vibrant display, capable camera system, and reliable functionality.\",\"category\":\"smartphones\",\"price\":249.99,\"discountPercentage\":10.17,\"rating\":3.5,\"stock\":50,\"tags\":[\"smartphones\",\"vivo\"],\"brand\":\"Vivo\",\"sku\":\"SMA-VIV-VIV-134\",\"weight\":4,\"dimensions\":{\"width\":14.06,\"height\":11.79,\"depth\":6.78},\"warrantyInformation\":\"6 months warranty\",\"shippingInformation\":\"Ships in 3-5 business days\",\"availabilityStatus\":\"In Stock\",\"reviews\":[{\"rating\":4,\"comment\":\"Very satisfied!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Samantha Martinez\",\"reviewerEmail\":\"samantha.martinez@x.dummyjson.com\"},{\"rating\":3,\"comment\":\"Very disappointed!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Logan Lee\",\"reviewerEmail\":\"logan.lee@x.dummyjson.com\"},{\"rating\":4,\"comment\":\"Would buy again!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Sophia Jones\",\"reviewerEmail\":\"sophia.jones@x.dummyjson.com\"}],\"returnPolicy\":\"7 days return policy\",\"minimumOrderQuantity\":1,\"meta\":{\"createdAt\":\"2025-04-30T09:41:02.054Z\",\"updatedAt\":\"2025-04-30T09:41:02.054Z\",\"barcode\":\"8575699153333\",\"qrCode\":\"https://cdn.dummyjson.com/public/qr-code.png\"},\"images\":[\"https://cdn.dummyjson.com/product-images/smartphones/vivo-s1/1.webp\",\"https://cdn.dummyjson.com/product-images/smartphones/vivo-s1/2.webp\",\"https://cdn.dummyjson.com/product-images/smartphones/vivo-s1/3.webp\"],\"thumbnail\":\"https://cdn.dummyjson.com/product-images/smartphones/vivo-s1/thumbnail.webp\"},{\"id\":135,\"title\":\"Vivo V9\",\"description\":\"The Vivo V9 is a smartphone known for its sleek design and emphasis on capturing high-quality selfies. It features a notch display, dual-camera setup, and a modern design.\",\"category\":\"smartphones\",\"price\":299.99,\"discountPercentage\":17.67,\"rating\":3.6,\"stock\":82,\"tags\":[\"smartphones\",\"vivo\"],\"brand\":\"Vivo\",\"sku\":\"SMA-VIV-VIV-135\",\"weight\":4,\"dimensions\":{\"width\":19.85,\"height\":21.83,\"depth\":13.04},\"warrantyInformation\":\"2 year warranty\",\"shippingInformation\":\"Ships in 1 month\",\"availabilityStatus\":\"In Stock\",\"reviews\":[{\"rating\":2,\"comment\":\"Very unhappy with my purchase!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Logan Lawson\",\"reviewerEmail\":\"logan.lawson@x.dummyjson.com\"},{\"rating\":5,\"comment\":\"Awesome product!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Layla Young\",\"reviewerEmail\":\"layla.young@x.dummyjson.com\"},{\"rating\":4,\"comment\":\"Great value for money!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Asher Scott\",\"reviewerEmail\":\"asher.scott@x.dummyjson.com\"}],\"returnPolicy\":\"60 days return policy\",\"minimumOrderQuantity\":2,\"meta\":{\"createdAt\":\"2025-04-30T09:41:02.054Z\",\"updatedAt\":\"2025-04-30T09:41:02.054Z\",\"barcode\":\"4295398764784\",\"qrCode\":\"https://cdn.dummyjson.com/public/qr-code.png\"},\"images\":[\"https://cdn.dummyjson.com/product-images/smartphones/vivo-v9/1.webp\",\"https://cdn.dummyjson.com/product-images/smartphones/vivo-v9/2.webp\",\"https://cdn.dummyjson.com/product-images/smartphones/vivo-v9/3.webp\"],\"thumbnail\":\"https://cdn.dummyjson.com/product-images/smartphones/vivo-v9/thumbnail.webp\"},{\"id\":136,\"title\":\"Vivo X21\",\"description\":\"The Vivo X21 is a premium smartphone with a focus on cutting-edge technology. It features an in-display fingerprint sensor, a high-resolution display, and advanced camera capabilities.\",\"category\":\"smartphones\",\"price\":499.99,\"discountPercentage\":17.41,\"rating\":4.26,\"stock\":7,\"tags\":[\"smartphones\",\"vivo\"],\"brand\":\"Vivo\",\"sku\":\"SMA-VIV-VIV-136\",\"weight\":10,\"dimensions\":{\"width\":22.49,\"height\":21.62,\"depth\":27.88},\"warrantyInformation\":\"1 year warranty\",\"shippingInformation\":\"Ships in 1-2 business days\",\"availabilityStatus\":\"In Stock\",\"reviews\":[{\"rating\":4,\"comment\":\"Very pleased!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Liam Gonzalez\",\"reviewerEmail\":\"liam.gonzalez@x.dummyjson.com\"},{\"rating\":4,\"comment\":\"Fast shipping!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Aurora Barnes\",\"reviewerEmail\":\"aurora.barnes@x.dummyjson.com\"},{\"rating\":2,\"comment\":\"Not as described!\",\"date\":\"2025-04-30T09:41:02.054Z\",\"reviewerName\":\"Evelyn Walker\",\"reviewerEmail\":\"evelyn.walker@x.dummyjson.com\"}],\"returnPolicy\":\"60 days return policy\",\"minimumOrderQuantity\":3,\"meta\":{\"createdAt\":\"2025-04-30T09:41:02.054Z\",\"updatedAt\":\"2025-04-30T09:41:02.054Z\",\"barcode\":\"9944308291810\",\"qrCode\":\"https://cdn.dummyjson.com/public/qr-code.png\"},\"images\":[\"https://cdn.dummyjson.com/product-images/smartphones/vivo-x21/1.webp\",\"https://cdn.dummyjson.com/product-images/smartphones/vivo-x21/2.webp\",\"https://cdn.dummyjson.com/product-images/smartphones/vivo-x21/3.webp\"],\"thumbnail\":\"https://cdn.dummyjson.com/product-images/smartphones/vivo-x21/thumbnail.webp\"}],\"total\":17,\"skip\":0,\"limit\":17}",
+      "tool_call_id": "call_1783872856958882591",
+      "name": "search_products",
+      "metadata": {
+        "versions": {
+          "@langchain/core": "1.2.1"
+        }
+      },
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "31a0729d-3000-46cc-b008-db21e56e0874"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-1783872869068894906",
+      "content": "Here are the **smartphones under $500** found in the store:\n\n| # | **Phone** | **Brand** | **Price** | **Discounted Price** | **Rating** | **Stock** |\n|---|---|---|---|---|---|---|\n| 1 | **Realme C35** | Realme | $149.99 | ~$127.04 | ⭐ 4.2 | ✅ In Stock (48) |\n| 2 | **iPhone 5s** | Apple | $199.99 | ~$174.15 | ⭐ 2.83 | ✅ In Stock (25) |\n| 3 | **Oppo A57** | Oppo | $249.99 | ~$243.92 | ⭐ 3.94 | ✅ In Stock (19) |\n| 4 | **Vivo S1** | Vivo | $249.99 | ~$224.57 | ⭐ 3.5 | ✅ In Stock (50) |\n| 5 | **iPhone 6** | Apple | $299.99 | ~$279.93 | ⭐ 3.41 | ✅ In Stock (60) |\n| 6 | **Oppo K1** | Oppo | $299.99 | ~$245.13 | ⭐ 4.25 | ✅ In Stock (55) |\n| 7 | **Realme X** | Realme | $299.99 | ~$279.15 | ⭐ 3.7 | ✅ In Stock (12) |\n| 8 | **Samsung Galaxy S7** | Samsung | $299.99 | ~$241.34 | ⭐ 3.3 | ✅ In Stock (67) |\n| 9 | **Vivo V9** | Vivo | $299.99 | ~$247.00 | ⭐ 3.6 | ✅ In Stock (82) |\n| 10 | **Realme XT** | Realme | $349.99 | ~$309.71 | ⭐ 4.58 | ✅ In Stock (80) |\n| 11 | **Oppo F19 Pro Plus** | Oppo | $399.99 | ~$325.43 | ⭐ 3.51 | ✅ In Stock (78) |\n| 12 | **Samsung Galaxy S8** | Samsung | $499.99 | ~$402.74 | ⭐ 4.4 | ❌ Out of Stock |\n| 13 | **Vivo X21** | Vivo | $499.99 | ~$412.93 | ⭐ 4.26 | ✅ In Stock (7) |\n\n### 🏆 Top Picks:\n- **Best Value:** Realme C35 at ~$127 (discounted) with a 4.2 rating\n- **Best Rated:** Realme XT at ~$310 (discounted) with a 4.58 rating\n- **Best Apple Option:** iPhone 6 at ~$280 (discounted)\n- **Best Samsung Option:** Samsung Galaxy S7 at ~$241 (discounted)\n\nWould you like more details on any of these phones, or would you like me to send this list to you on Telegram?",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {},
+        "finish_reason": "stop",
+        "model_provider": "openai",
+        "model_name": "glm-5.2"
+      },
+      "type": "ai",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "input_token_details": {},
+        "output_token_details": {}
+      }
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "are these real products? from the search_products tool? ",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "id": "d797e51d-066d-4654-bf4b-7a186e02bcff"
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "id": "chatcmpl-1783872912708613932",
+      "content": "Yes, those results genuinely came from the `search_products` tool — I didn't make them up. However, I should be transparent about what I observed:\n\nLooking at the data more closely, there are signs that this appears to be **mock/demo data** rather than a real store inventory:\n\n1. **Image URLs** point to `cdn.dummyjson.com` — \"DummyJSON\" is a well-known free API for generating fake/mock product data for testing and development purposes.\n2. **Product lineup** includes older models (iPhone 5s, iPhone 6, Samsung Galaxy S7) that you wouldn't typically find in a current store catalog.\n3. **Review data** and metadata all share the same timestamp (`2025-04-30T09:41:02`), which is unusual for real reviews.\n\nSo in summary:\n- ✅ The results **did come from the tool** I called — I didn't fabricate them.\n- ⚠️ But the underlying store data appears to be **mock/test data**, not a real product catalog.\n\nIf you're looking to buy an actual smartphone under $500, I'd recommend checking real retailers like Amazon, Best Buy, or B&H Photo Video. Would you like help with anything else?",
+      "additional_kwargs": {},
+      "response_metadata": {
+        "tokenUsage": {},
+        "finish_reason": "stop",
+        "model_provider": "openai",
+        "model_name": "glm-5.2"
+      },
+      "type": "ai",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "input_token_details": {},
+        "output_token_details": {}
+      }
+    }
+  }
+]
